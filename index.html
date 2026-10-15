@@ -1,136 +1,747 @@
 <!doctype html>
-<html lang="id">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#078b43">
-<title>GoTo Impact Journey | Platform CSR UMKM</title>
-<style>
-:root{--green:#078b43;--green2:#13a653;--dark:#075b32;--mint:#eaf6ee;--mint2:#f4faf5;--ink:#18251d;--muted:#647269;--line:#dce9df;--white:#fff;--gold:#f0c84b;--shadow:0 12px 30px rgba(10,74,39,.07)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f8faf8;color:var(--ink);font-family:Inter,"Plus Jakarta Sans",Arial,sans-serif;line-height:1.5}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}.topline{height:7px;background:linear-gradient(90deg,var(--dark),var(--green2),#a6dcb7)}
-header{background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.logo{width:43px;height:43px;border-radius:14px;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px;letter-spacing:-1px;box-shadow:0 6px 14px #078b4326;overflow:hidden}.logo svg{width:26px;height:26px;fill:#fff}.brandname{font-weight:900;letter-spacing:-.6px;font-size:20px}.brandname span{color:var(--green)}.tagline{font-size:11px;color:var(--muted);margin-top:1px}.navright{display:flex;align-items:center;gap:10px}.demo-pill{font-size:11px;font-weight:800;color:var(--dark);background:var::mint;border:1px solid #cde6d4;border-radius:999px;padding:7px 11px}.role-select{max-width:220px;border:1px solid var(--line);background:white;padding:10px 12px;border-radius:12px;font-size:12px;font-weight:700;color:var(--ink)}
-.hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(90deg,rgba(3,43,24,.92) 0%,rgba(4,82,40,.78) 48%,rgba(5,91,44,.42) 100%),url("./goto_169.webp") center 18%/cover no-repeat;color:#fff;padding:72px 0 68px;min-height:430px}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.hero:before{width:380px;height:380px;border:1px solid #ffffff22;right:-100px;top:-180px;box-shadow:0 0 0 24px #ffffff08,0 0 0 48px #ffffff06}.hero:after{width:260px;height:260px;background:#ffffff08;right:17%;bottom:-220px}.hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);align-items:center;gap:32px;position:relative;z-index:1}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px;font-weight:900;color:#b7ebc7}.hero h1{font-size:clamp(32px,4.5vw,52px);line-height:1.06;letter-spacing:-1.8px;margin:10px 0 14px;max-width:680px}.hero h1 span{color:#a6e6b8}.hero p{color:#e2f4e7;max-width:580px;font-size:14px;margin:0}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:800;font-size:12px;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--green);color:#fff;box-shadow:0 5px 12px #078b4320}.btn-white{background:#fff;color:var(--dark)}.btn-ghost{background:#ffffff14;color:#fff;border:1px solid #ffffff40}.btn-outline{background:#fff;color:var(--green);border:1px solid var(--line)}.hero-img-box{background:#ffffff12;border:1px solid #ffffff35;border-radius:24px;padding:16px;backdrop-filter:blur(6px);text-align:center}.hero-img-box img{width:100%;height:auto;max-height:240px;object-fit:cover;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,.2)}.hero-card{background:#ffffff12;border:1px solid #ffffff35;border-radius:24px;padding:22px;backdrop-filter:blur(6px)}.hero-card .smallcap{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#c8efd3;font-weight:900}.hero-card h3{font-size:22px;margin:8px 0}.hero-card p{font-size:12px}.steps-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}.steps-mini div{background:#ffffff12;border:1px solid #ffffff1d;border-radius:12px;padding:11px 8px;font-size:10px;color:#effff2}.steps-mini strong{display:block;font-size:17px;color:#fff}
-main{padding:30px 0 60px}.notice{display:flex;gap:11px;align-items:flex-start;padding:13px 15px;border:1px solid #d8eadc;border-radius:14px;background:#f0f8f2;color:#3d5946;font-size:12px;margin-bottom:22px}.notice b{color:var(--dark)}.notice-icon{width:26px;height:26px;flex:0 0 26px;border-radius:8px;background:#d9f0df;color:var(--green);display:grid;place-items:center;font-weight:900}.tabs{display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}.tab{background:transparent;border:1px solid transparent;padding:10px 13px;border-radius:11px;color:#65736a;font-size:12px;font-weight:800}.tab.active{background:var(--green);color:white;box-shadow:0 6px 14px #078b4320}.panel{display:none}.panel.active{display:block;animation:fade .25s ease}@keyframes fade{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:18px}.section-head h2{font-size:clamp(23px,3vw,31px);letter-spacing:-.8px;line-height:1.15;margin:5px 0}.section-head p{font-size:12px;color:var(--muted);margin:0;max-width:650px}.kicker{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);font-weight:900}.grid{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow);min-width:0}.card h3{font-size:15px;margin:0 0 8px;letter-spacing:-.2px}.card p{font-size:12px;color:var(--muted);margin:0}.card-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}.iconbox{width:38px;height:38px;border-radius:12px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:18px;flex:0 0 auto}.muted{color:var(--muted)}.small{font-size:11px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}.field label{font-size:11px;font-weight:800;color:#425348}.field input,.field select,.field textarea{width:100%;border:1px solid #d7e3da;background:#fbfdfb;border-radius:10px;padding:11px 12px;font-size:12px;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px #078b4315}.field textarea{min-height:86px;resize:vertical}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.checkline{display:flex;gap:9px;align-items:flex-start;font-size:11px;color:#53645a;margin:12px 0}.checkline input{margin-top:3px;accent-color:var(--green)}.divider{height:1px;background:#edf2ee;margin:16px 0}.status{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:99px;background:var(--mint);color:var(--dark);font-size:10px;font-weight:900}.status:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stat{padding:16px;border:1px solid var(--line);border-radius:16px;background:#fff}.stat span{display:block;color:var(--muted);font-size:10px;font-weight:800}.stat strong{display:block;font-size:27px;letter-spacing:-1px;color:var(--dark);margin:3px 0}.stat small{font-size:10px;color:var(--muted)}.progress-track{height:8px;background:#eaf0eb;border-radius:99px;overflow:hidden;margin:8px 0}.progress-fill{height:100%;background:linear-gradient(90deg,var(--green),#78c88e);border-radius:99px;transition:width .3s}.phase{border:1px solid var(--line);border-radius:15px;overflow:hidden;margin-bottom:12px}.phase-head{background:#f0f8f2;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;gap:10px}.phase-head strong{font-size:12px}.phase-head span{font-size:10px;color:var(--muted)}.mission{display:flex;gap:11px;padding:13px 15px;border-top:1px solid #edf2ee;align-items:flex-start}.mission input{accent-color:var(--green);margin-top:3px}.mission strong{font-size:12px;display:block}.mission p{font-size:11px;margin:3px 0 0;color:var(--muted)}.mission.done strong{text-decoration:line-through;color:#78877c}.pill-row{display:flex;flex-wrap:wrap;gap:8px}.choice{border:1px solid var(--line);background:#fff;padding:11px 12px;border-radius:12px;font-size:11px;font-weight:800;color:#526259;text-align:left}.choice.selected{border-color:var(--green);background:var(--mint);color:var(--dark);box-shadow:inset 0 0 0 1px var(--green)}.choice small{display:block;font-weight:500;color:var(--muted);margin-top:3px}.empty{padding:25px;text-align:center;border:1px dashed #cdded1;border-radius:14px;color:var(--muted);font-size:12px;background:#fbfdfb}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:11px}th,td{text-align:left;padding:11px 10px;border-bottom:1px solid #edf2ee;white-space:nowrap}th{color:#526259;font-size:10px;text-transform:uppercase;letter-spacing:.5px;background:#f6faf7}.badge-live{font-size:9px;letter-spacing:.6px;font-weight:900;background:#e2f4e7;color:var(--dark);border:1px solid #cde6d4;padding:5px 8px;border-radius:7px}.callout{padding:13px 15px;background:#fff9e8;border:1px solid #f1e3b5;border-radius:13px;color:#6b5b2c;font-size:11px}.message{border-radius:12px;padding:12px;background:#f2f8f3;margin-bottom:9px;font-size:11px}.message strong{display:block;margin-bottom:4px}.message.reply{margin-left:18px;background:#fff;border:1px solid var(--line)}.hidden{display:none!important}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#143d25;color:#fff;padding:12px 17px;border-radius:12px;font-size:12px;font-weight:700;box-shadow:var(--shadow);z-index:50;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}footer{background:#fff;border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:18px;align-items:center}.footer-brand{font-weight:900;color:var(--dark)}.dots{position:fixed;pointer-events:none;z-index:-1;right:-35px;bottom:-35px;width:220px;height:220px;opacity:.25;background-image:radial-gradient(#9fcfac 2px,transparent 2px);background-size:18px 18px;mask-image:radial-gradient(circle,black,transparent 70%)}
-@media(max-width:850px){.hero{background-position:center 12%;background-image:linear-gradient(90deg,rgba(3,43,24,.91),rgba(4,82,40,.72)),url("./goto_169.webp")}.hero-grid{grid-template-columns:1fr}.hero-card,.hero-img-box{max-width:540px}.grid-4,.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{padding:12px 0;align-items:flex-start}.navright{align-items:flex-end;flex-direction:column}.role-select{max-width:190px}}
-@media(max-width:560px){.hero{background-position:58% top;min-height:460px}.wrap{width:min(100% - 24px,1160px)}.nav{min-height:unset}.brandname{font-size:16px}.tagline{font-size:9px}.logo{width:37px;height:37px}.demo-pill{display:none}.role-select{max-width:150px;font-size:10px;padding:8px}.hero{padding:38px 0}.hero h1{font-size:37px}.hero-card,.hero-img-box{padding:17px}.section-head{align-items:flex-start;flex-direction:column}.grid-2,.grid-3,.grid-4,.stats{grid-template-columns:1fr}.field-row{grid-template-columns:1fr;gap:0}.card{padding:16px}.footer-inner{align-items:flex-start;flex-direction:column}.steps-mini{grid-template-columns:repeat(3,1fr)}}
-@media print{header,.hero-actions,.tabs,.btn,footer{display:none!important}.panel{display:block!important;page-break-inside:avoid}.hero{background:#087a3b!important;print-color-adjust:exact}.card,.stat{box-shadow:none}}
-</style>
-</head>
-<body>
-<div class="topline"></div>
-<header><div class="wrap nav">
-  <a href="#top" class="brand">
-    <div class="logo">
-      <!-- GoTo Inspired SVG Logo -->
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.25 15.5h-2.5v-5.25H7.5v-2.25h5.75v7.5z"/>
-      </svg>
+<html lang="id"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20261015-00-cc32e58","C":{"Abril Fatface":"YACgEZbkUVE,0","Albert Sans":"YAHO2HRfeh4,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo Black":"YACgEZulLoA,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Baloo 2":"YAHO2IcQUcM,0","Barlow Condensed":"YAFdJljEuFc,0","Barlow":"YAFdJsyuOPM,1","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Cairo":"YAFdtXpDzlQ,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Cinzel":"YACgEeV8bIQ,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Figtree":"YAHO2b-mV7A,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Fredoka":"YACgEZml080,0","Georgia":"YAGzXkO0pEM,0","Hanken Grotesk":"YAHO2VB9G0I,0","Helvetica":"YAFcf7zkXN0,0","IBM Plex Mono":"YAFdJkmvhGI,0","IBM Plex Sans":"YAFdJgT0SHI,0","Impact":"YAFcfnjI7Vk,0","Instrument Sans":"YAHO2bKyaSQ,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Italiana":"YAHO2Toik_w,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Karla":"YAHO2V2NSXM,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Libre Caslon Display":"YAHO2XhLmt0,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Noto Sans JP":"YAFdJiHXlcI,0","Noto Sans KR":"YAGsojZj-RQ,0","Nunito Sans":"YAFdtQJYB9w,1","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Open Sans":"YAFdJt8dAY0,1","Oswald":"YACgEQY10lw,0","Outfit":"YAHO2nVlg14,0","Pacifico":"YADLjORQ1u4,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAHO2gdhi18,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Public Sans":"YAFdJj8NdaU,1","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","STIX Two Text":"YAHO2joycuk,0","Sarabun":"YAFdJssSnME,0","Schibsted Grotesk":"YAHO2sWydRk,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Space Mono":"YADW1-vpsoc,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script><script src="/_sdk/05db820ba1544614.telemetry_sdk.js" integrity="sha512-a7JzkQDDcioSXpM61nxTfeRW7PcxWQy5+BrhyeTFmQFsXJ+Gncm0y50u7fTA7qOPegFnRgqCfa0mGUOK1yjDWQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GoTo Impact Journey</title>
+  <style>
+    :root{--green:#078b43;--green-dark:#056d36;--ink:#18221d;--muted:#58675e;--line:#dfe6df;--paper:#f7faf8;--white:#fff;--yellow:#00AA13}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;width:100%;background:var(--paper);color:var(--ink);font-family:Figtree,'Segoe UI',sans-serif}
+    h1,h2,h3,.display{font-family:Urbanist,Figtree,sans-serif;letter-spacing:-.035em}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    button:disabled{cursor:wait;opacity:.65}
+    :focus-visible{outline:3px solid #a67800;outline-offset:3px}
+    [hidden]{display:none!important}
+    .shell{width:100%;min-height:calc(100 * min(var(--vh, 1vh), 1vh))}
+    .sidebar{position:fixed;inset:0 auto 0 0;width:260px;background:#fff;border-right:1px solid var(--line);z-index:30;display:flex;flex-direction:column;padding:29px 16px 20px}
+    .brand{display:flex;align-items:center;gap:11px;padding:0 11px 30px;text-decoration:none;color:var(--ink)}
+    .brand-logo{width:43px;height:43px;object-fit:contain;flex-shrink:0}
+    .brand-text{font-family:Urbanist,Figtree,sans-serif;font-size:17px;font-weight:750;line-height:1.08}
+    .brand-kicker{display:block;font-family:Figtree,sans-serif;font-size:10px;letter-spacing:.18em;font-weight:800;color:var(--green);margin-top:5px}
+    .nav-btn{width:100%;min-height:46px;border:0;border-left:3px solid transparent;border-radius:0 8px 8px 0;background:transparent;color:#405249;text-align:left;display:flex;align-items:center;gap:12px;padding:10px 12px;margin:3px 0;font-weight:650;font-size:12px;line-height:1.35;transition:background .2s,color .2s}
+    .nav-btn:hover{background:#f0f6f1;color:var(--green-dark)}
+    .nav-btn.active{border-left-color:var(--green);background:#eaf5ed;color:#075f31}
+    .nav-icon{width:18px;height:18px;flex-shrink:0}
+    .sidebar-foot{margin-top:auto;border-top:1px solid var(--line);padding:20px 12px 2px;color:var(--muted);font-size:12px;line-height:1.6}
+    .workspace{margin-left:260px;min-width:0}
+    .topbar{min-height:76px;background:rgba(255,255,255,.92);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:12px 39px;gap:15px}.topbar-wordmark{display:none}.menu-button{display:none}@supports selector(body:has(*)){body:has(#view-beranda.active) .sidebar{position:absolute;top:0;left:0;right:0;width:100%;height:78px;background:linear-gradient(180deg,rgba(0,0,0,.62),transparent);border-bottom:0;box-shadow:none;color:#fff;z-index:50}body:has(#view-beranda.active) .sidebar .brand,body:has(#view-beranda.active) .sidebar .nav-btn{color:#fff}body:has(#view-beranda.active) .sidebar .nav-btn:hover{background:rgba(255,255,255,.12);color:#fff}body:has(#view-beranda.active) .sidebar .nav-btn.active{background:rgba(255,255,255,.14);border-bottom-color:#00AA13;color:#fff}body:has(#view-beranda.active) .workspace{padding-top:0}body:has(#view-beranda.active) .topbar{display:none}body:has(#view-beranda.active) .content{padding:0;max-width:none}body:has(#view-beranda.active) .menu-button{display:none}body:has(#view-beranda.active) .hero{border-radius:0;min-height:calc(82 * min(var(--vh, 1vh), 1vh))}}
+    .topbar-left,.top-controls{display:flex;align-items:center;gap:16px;min-width:0}.topbar-wordmark{width:118px;height:auto;max-height:48px;object-fit:contain;object-position:left center;display:block;filter:brightness(0) invert(1);background:linear-gradient(174deg,transparent 67%,#00AA13 68%,#00AA13 86%,transparent 87%)}
+    .topbar-wordmark{font-family:Urbanist,Figtree,sans-serif;font-size:27px;font-weight:750;letter-spacing:-.06em;color:#fff;line-height:1;padding-left:4px}
+    .top-title{font-size:13px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .saved{color:#345f45;font-size:11px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+    .saved:before{content:"";width:7px;height:7px;background:var(--green);border-radius:50%}
+    .role-select{border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px 26px 10px 12px;color:var(--ink);font-weight:750;font-size:12px}
+    .avatar{width:35px;height:35px;border-radius:50%;background:#e8f3eb;color:#075f31;display:grid;place-items:center;font-size:11px;font-weight:800;flex-shrink:0}
+    .content{width:100%;max-width:1450px;margin:0 auto;padding:38px 40px 70px}
+    .view{display:none;animation:rise .35s ease both}.view.active{display:block}#view-csr{background:#F8F9FA;color:#111827;padding:32px;border-radius:16px}#view-csr .card{background:#FFFFFF;border-color:#e5e7eb;box-shadow:0 4px 18px rgba(17,24,39,.045)}#view-csr .page-title{font-size:clamp(30px,3.5vw,48px);margin-bottom:10px}#view-csr .intro{margin-bottom:26px}#view-csr .csr-kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:30px}#view-csr .csr-section-title{font-size:20px;font-weight:750;margin:0}#view-csr .csr-table-header{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:14px}#view-csr .csr-filters{display:flex;align-items:end;gap:10px}#view-csr .csr-filters .field{margin:0;min-width:150px}#view-csr .csr-filters .field label{font-size:10px;color:#58675e}#view-csr .csr-filters select{min-height:38px;padding:8px 28px 8px 10px;font-size:11px}#view-csr .csr-summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:24px}#view-csr .csr-summary-card{padding:22px}#view-csr .csr-summary-card h2{font-size:18px;margin:0 0 16px}#view-csr .csr-report-footer{margin-top:25px}#view-csr .csr-report-footer .notice{margin-top:0}@media(max-width:900px){#view-csr .csr-kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){#view-csr{padding:22px 17px}#view-csr .csr-table-header{align-items:stretch;flex-direction:column;gap:12px}#view-csr .csr-filters{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}#view-csr .csr-filters .field{min-width:0}#view-csr .csr-kpi-grid,#view-csr .csr-summary-grid{grid-template-columns:1fr}}
+    @keyframes rise{from{opacity:.55;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--green-dark);margin-bottom:13px}
+    .page-title{font-weight:750;line-height:1.02;margin:0 0 15px;font-size:clamp(35px,4.3vw,60px);max-width:850px}
+    .intro{color:var(--muted);line-height:1.75;max-width:690px;margin:0 0 31px;font-size:14px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:0 5px 22px rgba(13,43,25,.025)}
+    .pad{padding:25px}
+    .section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:35px 0 15px;padding-top:3px}
+    .section-head h2{font-size:22px;font-weight:750;margin:0}
+    .hero{position:relative;min-height:calc(76 * min(var(--vh, 1vh), 1vh));display:flex;align-items:flex-end;overflow:hidden;background:#111;box-shadow:0 12px 40px rgba(13,43,25,.12)}
+    .hero-copy{width:min(760px,100%);padding:clamp(34px,6vw,82px);padding-top:120px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;position:relative;z-index:4;color:#fff}.hero-copy .hero-description,.hero-copy .button-row{display:none}
+    .hero-copy:before{display:none}
+    .hero-copy h1{font-size:clamp(43px,6vw,82px);line-height:.99;font-weight:750;margin:22px 0 14px;max-width:650px;color:#fff}
+    .hero-copy p{max-width:470px;color:#fff;font-size:13px;line-height:1.65;margin:0 0 22px}
+    .hero-art{position:absolute;inset:0;min-height:0;background:linear-gradient(135deg,#098748,#124532);overflow:hidden}
+    .hero-art:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.3) 52%,rgba(0,0,0,.08) 100%),linear-gradient(0deg,rgba(0,0,0,.58),transparent 68%);z-index:2;pointer-events:none}
+    .hero-art:after{display:none}
+    .hero-art img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 60%;display:block;z-index:1}
+    .fallback{position:absolute;inset:0;display:grid;align-content:center;justify-items:center;text-align:center;padding:28px;color:#fff;font:750 30px Urbanist,Figtree,sans-serif;line-height:1.2;z-index:0;background:linear-gradient(135deg,#098748,#124532)}
+    .fallback-image{z-index:1;object-fit:cover}.fallback span{font:700 11px Figtree,sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-top:12px}
+    .hero-art.image-failed .fallback{z-index:0}.hero-art.fallback-failed .fallback-image{display:none!important}.image-hidden{display:none!important}
+    .pill{display:inline-flex;align-items:center;gap:6px;border-radius:5px;padding:7px 10px;background:#eaf5ed;color:#075f31;font-weight:800;font-size:11px;line-height:1.2}
+    .hero-copy>.pill{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(8px)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:8px;padding:11px 17px;font-weight:750;font-size:12px;min-height:44px;transition:background .2s,transform .2s;text-decoration:none}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--green);color:#fff}.btn-primary:hover{background:var(--green-dark)}
+    .btn-light{background:#fff;border-color:#cbd9ce;color:#234331}.btn-light:hover{background:#edf5ef}.hero-copy .btn-light{background:transparent;border-color:#fff;color:#fff}.hero-copy .btn-light:hover{background:rgba(255,255,255,.14)}
+    .btn-danger{background:#fff;border-color:#dbb0b0;color:#922c2c}.btn-danger:hover{background:#fff1f1}
+    .button-row{display:flex;gap:10px;flex-wrap:wrap}
+    .grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+    .metric{padding:23px;min-height:142px}.metric-label{font-size:12px;color:var(--muted);font-weight:650}
+    .metric-value{font:750 clamp(22px,2.3vw,34px) Urbanist,Figtree,sans-serif;margin:15px 0 5px;overflow-wrap:anywhere;line-height:1.05}
+    .metric-sub{font-size:11px;color:var(--muted);line-height:1.5}
+    .journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+    .step{position:relative;padding:17px 12px 8px 0}
+    .step:not(:last-child):after{content:"";height:1px;position:absolute;top:32px;left:32px;right:9px;background:#cedbd0}
+    .step-dot{width:31px;height:31px;border-radius:50%;border:1px solid #a9c9b1;background:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;color:#247147;position:relative;z-index:1;margin-bottom:12px}
+    .step.on .step-dot{background:var(--green);color:#fff;border-color:var(--green)}
+    .step strong{font-size:12px;display:block}.step small{font-size:11px;color:var(--muted)}
+    .progress{height:7px;border-radius:99px;background:#e5ede7;overflow:hidden}
+    .progress-fill{height:100%;background:var(--green);border-radius:inherit;transition:width .3s}
+    .profile{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}
+    .profile div{border-right:1px solid var(--line);min-width:0;padding-right:9px}.profile div:last-child{border:0}
+    .profile span{display:block;color:var(--muted);font-size:11px;margin-bottom:8px}.profile strong{font-size:13px;overflow-wrap:anywhere}
+    .need-card{padding:22px;position:relative;transition:border .2s,transform .2s}.need-card:hover{transform:translateY(-2px)}
+    .need-card.chosen{border-color:var(--green);box-shadow:inset 0 3px var(--green)}
+    .need-card h3{font-size:19px;margin:19px 0 8px;font-weight:750}
+    .need-card p{font-size:12px;line-height:1.65;color:var(--muted);min-height:62px}
+    .need-icon{width:40px;height:40px;border-radius:9px;background:#eaf5ed;display:grid;place-items:center;color:var(--green)}
+    .need-icon svg{width:21px;height:21px}.need-card .btn{width:100%}
+    .active-tag{display:block;color:#086c37;font-size:11px;font-weight:800;margin-top:10px}
+    .recommend{background:#edf6ef;border:1px solid #c8e1cf;padding:27px;border-radius:13px;margin-top:17px}
+    .recommend h2{font-size:24px;margin:12px 0}.recommend p{font-size:13px;color:#40594a;margin:0 0 18px;line-height:1.7}
+    .phase{margin:14px 0}.phase.phase-active{border-color:#00AA13;box-shadow:inset 0 3px #00AA13,0 5px 22px rgba(13,43,25,.025)}.phase summary{list-style:none;cursor:pointer;padding:22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .phase summary::-webkit-details-marker{display:none}.phase summary h2{font-size:19px;margin:0 0 5px}.phase summary small{color:var(--muted)}
+    .phase-body{border-top:1px solid var(--line);padding:18px 22px 24px}.phase-progress{min-width:125px;text-align:right;color:var(--green-dark);font-weight:800;font-size:13px}
+    .task{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #e8eee9}.task-card{border-bottom:1px solid #e8eee9}.task-card summary{list-style:none;cursor:pointer;align-items:center}.task-card summary::-webkit-details-marker{display:none}.task-number{font-size:11px;color:var(--muted);font-weight:800;min-width:52px}.task-card summary strong{flex:1}.task-body{padding:0 0 10px 64px}.task-body p{margin:0 0 12px;font-size:12px;line-height:1.6;color:var(--muted)}.status.in-progress{color:#9a6b00}
+    .task input{width:19px;height:19px;accent-color:#00AA13;margin-top:2px;cursor:pointer;flex-shrink:0}
+    .task strong{display:block;font-size:13px}.task p{margin:4px 0;font-size:12px;line-height:1.6;color:var(--muted)}
+    .status{display:inline-block;font-size:11px;font-weight:700;color:#596b60}.status.done{color:#00AA13}
+    .field{display:grid;gap:7px;margin-bottom:15px}.field label{font-weight:700;font-size:12px}
+    .field input,.field select,.field textarea{width:100%;border:1px solid #c6d3c9;border-radius:8px;padding:11px 12px;background:#fff;color:var(--ink);min-height:44px}
+    .field textarea{min-height:104px;resize:vertical}.field small{color:var(--muted);font-size:11px;line-height:1.5}
+    .survey-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .survey-card{padding:22px}.survey-card h3{font-size:18px;margin:19px 0 6px}.survey-card p{font-size:12px;color:var(--muted);min-height:43px}.survey-card .btn{width:100%}
+    .table-wrap{overflow-x:auto}.data-table{width:100%;border-collapse:collapse;font-size:12px}
+    .data-table th{text-align:left;color:#405148;font-weight:750;background:#f4f8f5}
+    .data-table td,.data-table th{padding:14px;border-bottom:1px solid var(--line);vertical-align:top}
+    .data-table td{line-height:1.5}.empty{padding:28px;text-align:center;color:var(--muted);font-size:13px}
+    .consult-card{padding:21px;margin-top:12px}.consult-card h3{font-size:17px;margin:10px 0}
+    .consult-card p{font-size:12px;color:#405148;line-height:1.7}
+    .consult-meta{display:flex;flex-wrap:wrap;align-items:center;gap:9px;color:var(--muted);font-size:11px}
+    .notice{padding:17px 19px;background:#fff9e8;border:1px solid #eadbaf;border-radius:10px;color:#594b20;font-size:12px;line-height:1.7}
+    .assessment-wizard-step{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 18px;padding:14px 16px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 4px 18px rgba(17,24,39,.045)}.assessment-wizard-label{font-size:13px;font-weight:800;color:#111827}.assessment-wizard-progress{flex:1;max-width:300px}.assessment-wizard-progress .progress{height:8px}.assessment-profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.assessment-wizard-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:24px;padding-top:20px;border-top:1px solid #e5e7eb}.assessment-wizard-actions .btn-secondary{background:#fff;border-color:#d1d5db;color:#111827}.assessment-wizard-actions .btn-secondary:hover{background:#f3f4f6}@media(max-width:620px){.assessment-wizard-step{align-items:flex-start;flex-direction:column}.assessment-wizard-progress{width:100%;max-width:none}.assessment-profile-grid{grid-template-columns:1fr}.assessment-wizard-actions{flex-direction:column-reverse}.assessment-wizard-actions .btn{width:100%}}
+    .assessment-group{border:0;border-top:1px solid var(--line);padding:23px 0 4px;margin:0}.assessment-group legend{font-family:Urbanist,Figtree,sans-serif;font-size:18px;font-weight:750;color:#111;padding:0 10px 0 0}.assessment-question{padding:18px 0;border-bottom:1px solid #edf0ed}.assessment-question p{margin:0 0 13px;font-size:13px;line-height:1.6;color:#111;font-weight:650}.assessment-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.assessment-options label{position:relative;display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 8px;border:1px solid #cbd3cd;border-radius:8px;background:#fff;color:#111;font-size:12px;font-weight:700;text-align:center;cursor:pointer;transition:.2s}.assessment-options label:has(input:checked){background:#00AA13;border-color:#00AA13;color:#fff}.assessment-options input{position:absolute;opacity:0;width:1px;height:1px}.assessment-options label:focus-within{outline:3px solid #a67800;outline-offset:2px}.sustainability-options{display:grid;gap:10px;margin-top:8px}.sustainability-options label{display:flex;align-items:center;justify-content:flex-start;gap:10px;text-align:left;padding:11px 13px;border:1px solid #e5e7eb;border-radius:9px;background:#fff;cursor:pointer}.sustainability-options input{width:17px;height:17px;flex:0 0 17px;accent-color:#078b43;margin:0}.obstacle-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:8px}.obstacle-options label{display:flex;align-items:center;justify-content:flex-start;gap:10px;min-height:46px;padding:11px 13px;border:1px solid #e5e7eb;border-radius:9px;background:#fff;text-align:left;cursor:pointer}.obstacle-options label:has(input:checked){border-color:#078b43;background:#f0f8f2}.obstacle-options input{width:17px;height:17px;flex:0 0 17px;accent-color:#078b43;margin:0}.impact-textarea{width:100%;min-height:112px!important;padding:13px 14px!important;border:1px solid #e5e7eb!important;border-radius:9px!important;background:#fff}.impact-textarea:focus{border-color:#078b43!important;outline:3px solid #a6780033}.impact-field{margin-bottom:18px}.impact-field label{display:block;text-align:left;margin-bottom:7px}@media(max-width:550px){.assessment-options{grid-template-columns:repeat(2,minmax(0,1fr))}.obstacle-options{grid-template-columns:1fr}}.filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:12px;align-items:end}
+    .filters .field{margin:0}
+    .chart-row{display:grid;grid-template-columns:115px 1fr 42px;gap:12px;align-items:center;margin:17px 0;font-size:12px}
+    .chart-row strong{text-align:right}
+    .impact-journey-section{display:none;width:100%;margin-top:0;background:#111;color:#fff;overflow:hidden;position:relative}.impact-journey-section:before,.impact-journey-section:after{content:"";position:absolute;inset:-18% -8%;pointer-events:none;opacity:.32;background:radial-gradient(ellipse at 50% 58%,transparent 0 22%,rgba(10,91,54,.26) 22.2%,transparent 22.7%),radial-gradient(ellipse at 50% 58%,transparent 0 38%,rgba(10,91,54,.2) 38.2%,transparent 38.7%),radial-gradient(ellipse at 50% 58%,transparent 0 55%,rgba(10,91,54,.16) 55.2%,transparent 55.7%);transform:rotate(-8deg)}.impact-journey-section:after{opacity:.2;transform:rotate(16deg) scale(1.08)}body:has(#view-beranda.active) .impact-journey-section{display:block}
+    .impact-journey-inner{max-width:1120px;margin:0 auto;padding:76px 40px 58px;text-align:center}
+    .impact-journey-kicker{color:#00aa13;font-size:10px;font-weight:800;letter-spacing:.2em;margin:0 0 14px}
+    .impact-journey-title{font-family:Urbanist,Figtree,sans-serif;font-size:clamp(34px,4.4vw,60px);font-weight:750;line-height:1.02;margin:0 0 12px;color:#fff}
+    .impact-journey-subtitle{color:#fff;font-size:14px;line-height:1.6;margin:0 auto;max-width:560px}
+    .impact-pill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:790px;margin:48px auto 0}
+    .impact-pill{border:1px solid #555;background:transparent;border-radius:999px;min-height:126px;padding:22px 30px;display:flex;align-items:center;gap:17px;text-align:left;color:#fff}
+    .impact-pill-top{grid-column:1 / -1;justify-self:center;width:min(390px,100%)}
+    .impact-pill-left{justify-self:end;width:100%}.impact-pill-right{justify-self:start;width:100%}
+    .impact-icon{width:38px;height:38px;flex:0 0 38px;border:1px solid #626262;border-radius:50%;display:grid;place-items:center;color:#00aa13}.impact-icon svg{width:19px;height:19px}
+    .impact-number{display:block;color:#fff;font-size:28px;font-weight:800;line-height:1;margin-bottom:8px}.impact-copy{display:block;color:#d2d2d2;font-size:11px;line-height:1.5}.impact-copy::first-line{color:#00aa13}
+    .impact-journey-note{color:#8e8e8e;font-size:10px;line-height:1.5;margin:35px auto 0}
+    .footer{margin-top:43px;padding:22px 0 5px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px;color:var(--muted);font-size:11px}
+    .overlay{position:fixed;inset:0;background:rgba(12,28,19,.66);z-index:60;display:none;align-items:center;justify-content:center;padding:16px}
+    .overlay.open{display:flex}.dialog{background:#fff;border-radius:14px;width:min(100%,590px);max-height:calc(88 * min(var(--vh, 1vh), 1vh));overflow:auto;box-shadow:0 25px 80px #0c241d33;padding:28px}
+    .dialog h2{font-size:26px;margin:0 0 8px}.dialog-intro{color:var(--muted);font-size:12px;line-height:1.6;margin:0 0 19px}
+    .modal-top{display:flex;justify-content:space-between;align-items:start;gap:10px}
+    .icon-button{border:1px solid var(--line);background:#fff;border-radius:8px;width:38px;height:38px;font-size:23px;line-height:1;color:#354d3c}
+    .toast{position:fixed;bottom:20px;right:20px;z-index:100;max-width:min(380px,calc(100% - 32px));padding:13px 17px;background:#183b29;color:#fff;border-radius:9px;box-shadow:0 8px 24px #132b1d36;font-size:12px;display:none}
+    .toast.show{display:block}.menu-button,.drawer-backdrop{display:none}
+    @media(max-width:1150px){.grid-4,.survey-list{grid-template-columns:repeat(2,minmax(0,1fr))}.profile{grid-template-columns:repeat(3,minmax(0,1fr))}.profile div:nth-child(3){border:0}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:850px){.sidebar{transform:translateX(-100%);transition:transform .25s}.sidebar.open{transform:translateX(0)}.drawer-backdrop.open{display:block;position:fixed;inset:0;background:#142a1c88;z-index:29}.workspace{margin-left:0}.menu-button{display:grid;place-items:center;width:42px;height:42px;background:transparent;border:0;border-radius:0;font-size:21px}.topbar{padding:10px 17px;min-height:66px}.saved{display:none}.content{padding:23px 17px 48px}.hero{grid-template-columns:1fr}.hero-copy{padding:45px 30px 40px;min-height:calc(76 * min(var(--vh, 1vh), 1vh));justify-content:flex-end}.hero-copy:before{left:30px;top:22px}.hero-art{min-height:calc(76 * min(var(--vh, 1vh), 1vh));aspect-ratio:auto}.hero-art img{object-position:center 60%}}
+    @media(max-width:550px){.grid-4,.grid-2,.survey-list{grid-template-columns:1fr}.profile{grid-template-columns:repeat(2,minmax(0,1fr))}.profile div:nth-child(3){border-right:1px solid var(--line)}.profile div:nth-child(even){border:0}.journey{grid-template-columns:repeat(2,minmax(0,1fr))}.step:nth-child(2):after{display:none}.top-title{font-size:12px}.avatar{display:none}.role-select{max-width:99px;padding-left:7px;font-size:11px}.section-head{align-items:start;flex-direction:column}.footer{align-items:start;flex-direction:column}.chart-row{grid-template-columns:85px 1fr 36px;gap:7px}.data-table thead{display:none}.data-table,.data-table tbody,.data-table tr,.data-table td{display:block;width:100%}.data-table tr{border:1px solid var(--line);border-radius:9px;padding:8px;margin-bottom:9px}.data-table td{border:0;padding:5px 8px}.data-table td:before{content:attr(data-label) ": ";font-weight:700}.phase summary{align-items:flex-start;flex-direction:column}.phase-progress{width:100%;text-align:left}.filters{grid-template-columns:1fr}.hero-copy h1{font-size:46px}.impact-journey-inner{padding:58px 20px 42px}.impact-pill-grid{grid-template-columns:1fr;margin-top:35px}.impact-pill-top,.impact-pill-left,.impact-pill-right{grid-column:auto;width:100%;justify-self:stretch}.impact-pill{min-height:108px;padding:19px 22px}.impact-number{font-size:24px}}
+    /* Global visual refinements keep every module consistent and lightweight. */
+    body{background:#F8F9FA;color:#111827}
+    .content{background:#F8F9FA}
+    .card{background:#FFFFFF;border-radius:12px;box-shadow:0 4px 18px rgba(17,24,39,.045)}
+    .page-banner{position:relative;border-top:3px solid #00AA13}
+    .page-banner .eyebrow{display:flex;align-items:center;gap:8px;color:#111827}
+    .page-banner .eyebrow svg{width:16px;height:16px;color:#00AA13;flex:0 0 auto}
+    .btn-primary{background:#00AA13;color:#FFFFFF;font-weight:800;border-radius:8px}
+    .btn-primary:hover{background:#078b43}
+    .btn-primary:focus-visible{outline:3px solid #00AA13;outline-offset:3px}
+    .btn-primary:after{content:'→';font-size:16px;line-height:1;margin-left:2px}
+    .assessment-options label{border-color:#00AA13;background:#FFFFFF;color:#111827}
+    .assessment-options label:has(input:checked){background:#E8F5E9;border-color:#00AA13;color:#111827;box-shadow:inset 0 0 0 1px #00AA13}
+    .assessment-options label:focus-within{outline:3px solid #00AA13;outline-offset:2px}
+    .sustainability-options label,.obstacle-options label{border-color:#d1d5db;background:#FFFFFF;color:#111827}
+    .sustainability-options label:has(input:checked),.obstacle-options label:has(input:checked){background:#E8F5E9;border-color:#00AA13;box-shadow:inset 0 0 0 1px #00AA13}
+    .impact-textarea:focus{border-color:#00AA13!important;outline:3px solid #00AA1333}
+    /* Horizontal navigation replaces the desktop rail while preserving the existing routes. */
+    .sidebar{position:fixed;inset:0 0 auto 0;width:100%;height:78px;background:#fff;border-right:0;border-bottom:1px solid #e8eee9;box-shadow:0 2px 12px rgba(13,43,25,.045);z-index:50;display:flex;flex-direction:row;align-items:center;padding:0 34px;gap:30px}
+    .brand{width:auto;flex:0 0 auto;padding:0;text-decoration:none;gap:10px}
+    .brand-logo{width:36px;height:36px}.brand-text{font-size:15px}.brand-kicker{font-size:9px;margin-top:3px}
+    .sidebar nav{display:flex;align-items:stretch;gap:3px;min-width:0;flex:1;height:100%}
+    .nav-btn{width:auto;min-height:100%;border-left:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;padding:10px 13px;margin:0;color:#405249;font-size:11px;white-space:nowrap;justify-content:center}
+    .nav-btn:hover{background:#f0f6f1;color:var(--green-dark)}.nav-btn.active{border-left:0;border-bottom-color:#00AA13;background:#f0f8f2;color:#075f31}
+    .nav-icon{display:none}.sidebar-foot{display:none}.workspace{margin-left:0;padding-top:78px}.topbar{display:none!important}.content{background:#F8F9FA}.page-banner{background:#F8F9FA;border-radius:12px;padding:24px 28px;margin:0 0 28px;box-shadow:0 4px 18px rgba(17,24,39,.045)}.page-banner .eyebrow{color:#00AA13;margin:0 0 8px}.page-banner .page-title{color:#111827;font-size:clamp(30px,3.5vw,48px);margin:0 0 8px}.page-banner .intro{color:#6b7280;max-width:760px;margin:0;font-size:13px;line-height:1.6}
+    .content{max-width:none;padding-left:clamp(22px,4vw,60px);padding-right:clamp(22px,4vw,60px)}
+    @supports selector(body:has(*)){body:has(#view-beranda.active) .topbar{top:78px;left:0;right:0}.content{padding-top:38px}body:has(#view-beranda.active) .content{padding-top:78px}}
+    #nav .nav-btn[data-route="survei"]{display:flex}
+    @media(max-width:1050px){.sidebar{padding:0 20px;gap:18px}.nav-btn{padding-left:9px;padding-right:9px;font-size:10px}.brand-text{font-size:14px}}
+    @media(max-width:850px){.page-banner{padding:20px 18px;margin-bottom:22px}.page-banner .page-title{font-size:clamp(28px,8vw,38px)}.sidebar{top:78px;inset-inline:0;width:100%;height:auto;min-height:0;padding:12px 17px 16px;display:block;transform:translateY(-140%);transition:transform .25s;box-shadow:0 12px 25px rgba(13,43,25,.12)}.sidebar.open{transform:translateY(0)}.sidebar .brand{display:none}.sidebar nav{display:grid;height:auto;gap:2px}.nav-btn{min-height:45px;width:100%;justify-content:flex-start;border-bottom:0;border-left:3px solid transparent;border-radius:0 8px 8px 0;padding:10px 12px;font-size:12px}.nav-btn.active{border-left-color:#00AA13;border-bottom:0}.workspace{padding-top:78px}.topbar{padding:10px 17px}.menu-button{display:grid;place-items:center}.topbar-wordmark{display:none}body:has(#view-beranda.active) .topbar{top:78px}body:has(#view-beranda.active) .content{padding-top:78px}}
+    @media(max-width:850px){body:has(#view-beranda.active) .sidebar{top:0;display:flex;flex-direction:row;align-items:center;height:auto;min-height:72px;padding:10px 17px;transform:none;overflow-x:auto;overflow-y:hidden;white-space:nowrap}body:has(#view-beranda.active) .sidebar .brand{display:flex;flex:0 0 auto}body:has(#view-beranda.active) .sidebar nav{display:flex;flex:0 0 auto;height:auto;gap:2px}body:has(#view-beranda.active) .sidebar .nav-btn{width:auto;min-height:44px;border-left:0;border-bottom:3px solid transparent;border-radius:7px;padding:9px 11px;font-size:11px}body:has(#view-beranda.active) .sidebar .nav-btn.active{border-left:0;border-bottom-color:#00AA13}body:has(#view-beranda.active) .sidebar .brand-text{font-size:13px}body:has(#view-beranda.active) .sidebar .brand-logo{width:32px;height:32px}body:has(#view-beranda.active) #nav .nav-btn[data-route="survei"]{display:flex}body:has(#view-beranda.active) .hero-copy{min-height:calc(82 * min(var(--vh, 1vh), 1vh));padding:110px 30px 40px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/570d53629f0b998d.data_sdk.js" type="text/javascript" integrity="sha512-JEN39+V+Nvv9ZZOVS8vNk1iA9ErZJHTdgOw9KzPuMiK7m0I+KPEr/wmTnCFIQVsDjCZgJWfGnFi1IQh2Io2qyA=="></script>
+  <script src="/_sdk/0b63fb8940df03d4.editing_sdk.js" type="text/javascript" integrity="sha512-fFkkekAA7XKU9UcNO+7a7lGi1SDVYUdIo1lpZS9YpfVovu1WAj3C/MEr/w8zt6Jwq6OKflaYkwf4eOUpMYGz9A=="></script>
+  <script src="/_sdk/f195026a424c1f85.resizing_sdk.js" type="text/javascript" integrity="sha512-8On4Z+AXh1abEzZJ9Dbn9wOvFg+k1LsAaAzKGQ7LlfgXajZ9xEmZaZ1QVzv0AWhCZtCsEpWSOG9DgLri06TS7A=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(248, 249, 250);">
+  <div class="shell">
+   <div id="drawer-backdrop" class="drawer-backdrop"></div>
+   <aside id="sidebar" class="sidebar" aria-label="Navigasi utama">
+    <a href="#beranda" class="brand"> <img data-template-id="brand-logo" class="canva-image brand-logo" loading="lazy" src="canva://MAHX-DIpTDs/1" alt="Logo dari Brand Kit"> <span class="brand-text"><span data-template-id="brand-name" class="canva-text" style="color: rgb(24, 34, 29); font-weight: 700; font-style: normal; font-size: 16px;">GoTo Impact</span><small data-template-id="brand-kicker" class="canva-text brand-kicker" style="color: rgb(5, 109, 54); font-weight: 800; font-style: normal; font-size: 10px;">JOURNEY</small></span> </a>
+    <nav id="nav" aria-label="Modul aplikasi">
+     <button type="button" class="nav-btn" data-route="beranda">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3z"></path><path d="M9 20v-7h6v7"></path>
+      </svg>Beranda</button> <button type="button" class="nav-btn" data-route="kebutuhan">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect>
+      </svg>Asesmen Awal</button> <button type="button" class="nav-btn" data-route="hasil-asesmen">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h14v16H5zM8 8h8M8 12h6M8 16h4"></path>
+      </svg>Hasil Assessment &amp; Rekomendasi</button> <button type="button" class="nav-btn" data-route="misi">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12l5 5L20 6"></path><rect x="2" y="2" width="20" height="20" rx="4"></rect>
+      </svg>Misi Praktik 90 Hari</button> <button type="button" class="nav-btn" data-route="survei" aria-disabled="true">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 3h10l3 3v15H4V6zM8 11h8M8 15h8"></path>
+      </svg>Evaluasi Akhir 90 Hari</button> <button type="button" class="nav-btn" data-route="csr">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v12H8l-4 4zM8 10h8M8 13h5"></path>
+      </svg>Dashboard CSR dan Laporan</button>
+    </nav>
+    <div class="sidebar-foot">
+     90 hari praktik yang terarah.<br>
+      Catat perkembangan, tinjau hasilnya.
     </div>
-    <div><div class="brandname">GoTo <span>Impact Journey</span></div><div class="tagline">Platform Pendampingan & Evaluasi CSR UMKM</div></div>
-  </a>
-  <div class="navright"><span class="demo-pill">PORTAL AKTIF</span><select id="roleSelect" class="role-select" aria-label="Pilih tampilan pengguna"><option value="umkm">Tampilan Mitra UMKM</option><option value="mentor">Tampilan Mentor Pendamping</option><option value="admin">Tampilan Admin CSR</option></select></div>
-</div></header>
-<section class="hero" id="top"><div class="wrap hero-grid">
-  <div><div class="eyebrow">Pemberdayaan UMKM Berkelanjutan</div><h1>Ilmu yang dipelajari.<br><span>Aksi yang dijalani.</span></h1><p>Ruang pendampingan terintegrasi 90 hari untuk membantu mitra UMKM mempraktikkan materi pelatihan, berkonsultasi dengan mentor ahli, dan memantau perkembangan usaha secara real-time.</p><div class="hero-actions"><button class="btn btn-white" onclick="goTab('journey')">Mulai perjalanan <span>→</span></button><button class="btn btn-ghost" onclick="goTab('dashboard')">Lihat laporan dampak</button></div></div>
-  <aside class="hero-card" aria-label="Ringkasan program GoTo Impact Journey">
-    <div class="smallcap">Dampak dimulai dari aksi</div>
-    <h3>90 hari untuk bertumbuh bersama</h3>
-    <p>Program pendampingan yang menghubungkan pembelajaran, praktik usaha, konsultasi mentor, dan evaluasi perkembangan UMKM.</p>
-    <div class="steps-mini">
-      <div><strong>01</strong>Belajar & mulai</div>
-      <div><strong>02</strong>Praktik rutin</div>
-      <div><strong>03</strong>Evaluasi dampak</div>
+   </aside>
+   <div class="workspace">
+    <header class="topbar">
+     <div class="topbar-left"><img data-template-id="header-wordmark" class="canva-image topbar-wordmark" loading="lazy" src="canva://MAHX-DIpTDs/1" alt="Logo GoTo dengan tulisan putih dan garis kuning pada header"><span id="top-title" class="top-title">Beranda</span>
+     </div>
+     <div class="top-controls">
+      <span class="saved">Tersimpan di perangkat ini</span><label for="role" class="sr-only">Pilih peran</label><select id="role" class="role-select" aria-label="Pilih peran"><option>Mitra</option><option>CSR</option></select><span class="avatar" title="UMKM-JKT-01" aria-label="Peserta UMKM-JKT-01">UJ</span>
+     </div><button type="button" id="menu-button" class="menu-button" aria-label="Buka menu navigasi enam modul" aria-expanded="false" aria-controls="sidebar">☰</button>
+    </header>
+    <main class="content">
+     <section id="view-beranda" class="view" aria-label="Beranda">
+      <div class="hero">
+       <div class="hero-copy">
+        <h1 data-template-id="hero-title" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 71px;">GoTo Impact </h1>
+       </div>
+       <div class="hero-art">
+        <div class="fallback" aria-hidden="true">
+         Langkah kecil.<br>
+          Perkembangan nyata.<span>GoTo Impact Journey · 90 hari</span>
+        </div><img id="hero-fallback-image" data-template-id="hero-fallback-image" class="canva-image fallback-image" loading="lazy" src="https://awsimages.detik.net.id/community/media/visual/2021/05/17/goto_169.webp?w=600&amp;q=90" alt="Foto fallback aktivitas GoTo Impact Journey di Indonesia"><img id="hero-image" data-template-id="hero-image" class="canva-image" loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7BF8J9Z6aalJBO08uu_MMKXZij2N66N372oK9VhTL76cBbglZj5NtkCpA&amp;s=10" alt="Aktivitas pengemudi GoTo di jalanan Indonesia">
+       </div>
+      </div>
+     </section>
+     <section id="impact-journey-section" data-template-id="impact-journey-section" class="impact-journey-section" aria-labelledby="impact-journey-title" style="background: rgb(17, 17, 17); color: rgb(255, 255, 255);">
+      <div class="impact-journey-inner">
+       <p data-template-id="impact-journey-kicker" class="canva-text impact-journey-kicker" style="color: rgb(0, 170, 19); font-weight: 400; font-style: normal; font-size: 10px;">GO TO IMPACT</p>
+       <h2 data-template-id="impact-journey-title" class="canva-text impact-journey-title" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">GoTo Impact Journey</h2>
+       <p data-template-id="impact-journey-subtitle" class="canva-text impact-journey-subtitle" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 14px;">Dari pelatihan sampai laporan, dalam 90 hari</p>
+       <div class="impact-pill-grid">
+        <article data-template-id="impact-card-days" class="canva-card impact-pill impact-pill-top" style="background: transparent; color: rgb(255, 255, 255);">
+         <span class="impact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3 2"></path>
+          </svg></span>
+         <div><strong data-template-id="impact-card-days-number" class="canva-text impact-number" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 28px;">90 hari</strong><span data-template-id="impact-card-days-copy" class="canva-text impact-copy" style="color: rgb(210, 210, 210); font-weight: 400; font-style: normal; font-size: 11px;">Pendampingan setelah pelatihan</span>
+         </div>
+        </article>
+        <article data-template-id="impact-card-missions" class="canva-card impact-pill impact-pill-left" style="background: transparent; color: rgb(255, 255, 255);">
+         <span class="impact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"></circle><path d="m8 12 2.5 2.5L16 9"></path>
+          </svg></span>
+         <div><strong data-template-id="impact-card-missions-number" class="canva-text impact-number" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 28px;">12 misi</strong><span data-template-id="impact-card-missions-copy" class="canva-text impact-copy" style="color: rgb(210, 210, 210); font-weight: 400; font-style: normal; font-size: 11px;">Tugas praktik bertahap dalam 3 fase</span>
+         </div>
+        </article>
+        <article data-template-id="impact-card-stages" class="canva-card impact-pill impact-pill-right" style="background: transparent; color: rgb(255, 255, 255);">
+         <span class="impact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"></circle><path d="M8 8h8v8H8zM10 5v3m4-3v3m-4 8v3m4-3v3"></path>
+          </svg></span>
+         <div><strong data-template-id="impact-card-stages-number" class="canva-text impact-number" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 28px;">4 tahap</strong><span data-template-id="impact-card-stages-copy" class="canva-text impact-copy" style="color: rgb(210, 210, 210); font-weight: 400; font-style: normal; font-size: 11px;">Evaluasi: awal, hari 30, 60, dan 90</span>
+         </div>
+        </article>
+       </div>
+       <p data-template-id="impact-journey-note" class="canva-text impact-journey-note" style="color: rgb(142, 142, 142); font-weight: 400; font-style: normal; font-size: 10px;"> </p>
+      </div>
+     </section>
+     <section id="view-kebutuhan" class="view" aria-label="Asesmen Awal">
+      <div class="page-banner">
+       <div class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM9 11h6M9 15h6M9 7h3"></path>
+        </svg> IDENTIFIKASI USAHA
+       </div>
+       <h1 class="page-title">Asesmen Awal</h1>
+       <p class="intro">Isi asesmen untuk mengenali kondisi usaha berdasarkan kegiatan selama 30 hari terakhir.</p>
+      </div>
+      <div id="assessment-wizard-step" class="assessment-wizard-step" aria-live="polite"><span id="assessment-step-label" class="assessment-wizard-label">Langkah 1 dari 2: Profil Usaha</span>
+       <div class="assessment-wizard-progress">
+        <div id="assessment-wizard-progress" class="progress" role="progressbar" aria-label="Kemajuan asesmen" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+         <div id="assessment-wizard-progress-fill" class="progress-fill" style="width:50%"></div>
+        </div>
+       </div>
+      </div>
+      <div class="card pad">
+       <form id="assessment-form" novalidate="">
+        <div id="assessment-profile-step">
+         <div class="assessment-profile-grid">
+          <div class="field">
+           <label for="profile-business-name">Nama Usaha / UMKM</label><input id="profile-business-name" name="businessName" type="text" placeholder="Contoh: Kripik Tempe Barokah" required="">
+          </div>
+          <div class="field">
+           <label for="profile-owner-name">Nama Pemilik / Pengelola</label><input id="profile-owner-name" name="ownerName" type="text" placeholder="Contoh: Budi Santoso" required="">
+          </div>
+          <div class="field">
+           <label for="profile-business-category">Kategori Usaha</label><select id="profile-business-category" name="businessCategory" required=""><option value="">Pilih kategori usaha</option><option>Kuliner</option><option>Kriya/Kerajinan</option><option>Fashion</option><option>Jasa</option><option>Perdagangan</option></select>
+          </div>
+          <div class="field">
+           <label for="profile-city">Lokasi Kota / Kabupaten</label><input id="profile-city" name="city" type="text" placeholder="Contoh: Kota Serang" required="">
+          </div>
+         </div>
+         <div class="assessment-wizard-actions">
+          <button type="button" id="assessment-next" class="btn btn-primary">Lanjut ke Pertanyaan Asesmen →</button>
+         </div>
+        </div>
+        <div id="assessment-questions-step" hidden="">
+         <p class="text-sm text-gray-600 mb-6">Pilih satu jawaban yang paling sesuai untuk setiap pernyataan.</p>
+         <fieldset class="assessment-group">
+          <legend>A. Pencatatan Keuangan</legend>
+          <div class="assessment-question">
+           <p>1. Saya mencatat pemasukan dan pengeluaran usaha secara rutin.</p>
+           <div class="assessment-options">
+            Tidak Pernah|Jarang|Sering|Selalu
+           </div>
+          </div>
+          <div class="assessment-question">
+           <p>2. Saya menghitung keuntungan bersih usaha setiap bulan.</p>
+           <div class="assessment-options">
+            Tidak Pernah|Jarang|Sering|Selalu
+           </div>
+          </div>
+         </fieldset>
+         <fieldset class="assessment-group">
+          <legend>B. Promosi Digital</legend>
+          <div class="assessment-question">
+           <p>3. Saya mempromosikan usaha melalui media digital secara rutin.</p>
+           <div class="assessment-options">
+            Tidak Pernah|Jarang|Sering|Selalu
+           </div>
+          </div>
+          <div class="assessment-question">
+           <p>4. Saya memeriksa hasil promosi digital yang saya lakukan.</p>
+           <div class="assessment-options">
+            Tidak Pernah|Jarang|Sering|Selalu
+           </div>
+          </div>
+         </fieldset>
+         <fieldset class="assessment-group">
+          <legend>C. Pemanfaatan Alat Digital</legend>
+          <div class="assessment-question">
+           <p>5. Saya menggunakan aplikasi atau platform digital untuk membantu pencatatan keuangan atau pengelolaan pesanan.</p>
+           <div class="assessment-options">
+            Tidak Pernah|Jarang|Sering|Selalu
+           </div>
+          </div>
+          <div class="assessment-question">
+           <p>6. Saya menggunakan informasi dari pencatatan usaha atau platform digital untuk mengambil keputusan usaha.</p>
+           <div class="assessment-options">
+            Tidak Pernah|Jarang|Sering|Selalu
+           </div>
+          </div>
+         </fieldset>
+         <p id="assessment-error" class="text-red-700 text-sm mb-4" role="alert" hidden="">Silakan lengkapi semua pertanyaan sebelum melihat hasil assessment.</p>
+         <div class="progress mb-5" role="progressbar" aria-label="Kelengkapan assessment" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div id="assessment-progress" class="progress-fill" style="width:0%"></div>
+         </div>
+         <div class="assessment-wizard-actions">
+          <button type="button" id="assessment-back" class="btn btn-secondary">← Kembali</button><button type="submit" class="btn btn-primary">Lihat Hasil &amp; Rekomendasi →</button>
+         </div>
+        </div>
+       </form>
+      </div>
+     </section>
+     <section id="view-hasil-asesmen" class="view" aria-label="Hasil Asesmen dan Rekomendasi Pendampingan">
+      <div class="page-banner">
+       <div class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19V5M4 19h16M7 15l3-4 3 2 5-7"></path>
+        </svg> REKOMENDASI PROGRAM
+       </div>
+       <h1 class="page-title">Hasil Asesmen &amp; Rekomendasi</h1>
+       <p class="intro">Lihat hasil asesmen dan jalur misi yang direkomendasikan untuk usaha Anda.</p>
+      </div>
+      <section id="assessment-result" class="card pad" aria-labelledby="assessment-result-title"></section>
+     </section>
+     <section id="view-misi" class="view" aria-label="Misi Praktik 90 Hari">
+      <div class="page-banner">
+       <div class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="m8 12 2.5 2.5L16 9"></path>
+        </svg> PERJALANAN 90 HARI
+       </div>
+       <h1 class="page-title">Misi Praktik</h1>
+       <p class="intro">Selesaikan misi praktik sesuai jalur yang direkomendasikan untuk usaha Anda.</p>
+      </div>
+      <div id="mission-overview" class="card pad"></div>
+      <div id="milestones" class="journey mt-5"></div>
+      <div id="phases"></div>
+     </section>
+     <section id="view-survei" class="view" aria-label="Evaluasi Akhir 90 Hari">
+      <div class="eyebrow">
+       LANGKAH 04 / EVALUASI
+      </div>
+      <h1 class="page-title">Evaluasi Akhir 90 Hari</h1>
+      <p class="intro">Evaluasi ini bertujuan mengetahui perubahan yang Anda rasakan setelah menjalankan misi. Jawaban siap dikirim setelah seluruh bagian wajib dilengkapi.</p>
+      <div id="final-evaluation" class="card pad"></div>
+     </section>
+     <section id="view-csr" class="view" aria-label="Dashboard CSR dan Laporan">
+      <div class="page-banner">
+       <div class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19V5M4 19h16M7 15l3-4 3 2 5-7"></path>
+        </svg> MONITORING KEMAJUAN
+       </div>
+       <h1 class="page-title">Dashboard CSR &amp; Laporan Program</h1>
+       <p class="intro">Pantau peserta, evaluasi, dan ringkasan program GoTo Impact Journey.</p>
+      </div>
+      <div id="csr-metrics" class="csr-kpi-grid"></div>
+      <section aria-labelledby="monitoring-title">
+       <div class="csr-table-header">
+        <h2 id="monitoring-title" class="csr-section-title">Tabel Monitoring Peserta</h2>
+        <div class="csr-filters">
+         <div class="field"><label for="filter-phase">Jalur Misi</label><select id="filter-phase"><option value="semua">Semua jalur</option><option value="keuangan">Pencatatan Keuangan</option><option value="promosi">Promosi Digital</option><option value="digital">Pemanfaatan Alat Digital</option></select>
+         </div>
+         <div class="field"><label for="filter-survey">Status Evaluasi</label><select id="filter-survey"><option value="semua">Semua status</option><option value="belum">Belum Dimulai</option><option value="proses">Dalam Proses</option><option value="selesai">Selesai</option></select>
+         </div>
+        </div>
+       </div>
+       <div class="card table-wrap">
+        <table class="data-table">
+         <thead>
+          <tr>
+           <th>Nama UMKM &amp; Pemilik</th>
+           <th>Lokasi</th>
+           <th>Jalur Misi</th>
+           <th>Survei awal</th>
+           <th>Survei akhir</th>
+           <th>Fase aktif</th>
+          </tr>
+         </thead>
+         <tbody id="region-rows"></tbody>
+        </table>
+       </div>
+      </section>
+      <div class="csr-summary-grid">
+       <section class="card csr-summary-card" aria-labelledby="program-progress-title">
+        <h2 id="program-progress-title">Progres Program</h2>
+        <div id="phase-chart"></div>
+       </section>
+       <section class="card csr-summary-card" aria-labelledby="evaluation-title">
+        <h2 id="evaluation-title">Evaluasi</h2>
+        <div id="survey-chart"></div>
+       </section>
+      </div>
+      <div class="csr-report-footer">
+       <div class="section-head">
+        <h2>Ringkasan Laporan CSR</h2><span id="sample-label" class="pill"></span>
+       </div>
+       <p class="notice" style="background:#FFFFFF;border-color:#e5e7eb;color:#111827"><strong>Ringkasan Eksekutif:</strong> Peserta UMKM telah menyelesaikan 100% Misi Praktik Pemasaran Digital dan melengkapi seluruh tahapan evaluasi 90 hari dengan peningkatan skor efisiensi operasional.</p>
+       <p class="notice">Interpretasi dampak belum dapat disimpulkan karena jumlah responden terbatas dan data belum dirancang untuk membuktikan hubungan sebab-akibat.</p>
+       <div class="button-row mt-5"><button type="button" id="download-pdf" class="btn btn-primary">Unduh Laporan CSR Lengkap (PDF)</button>
+       </div>
+      </div>
+     </section>
+    </main>
+   </div>
+  </div>
+  <div id="survey-modal" class="overlay" role="presentation">
+   <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="survey-modal-title">
+    <div class="modal-top">
+     <div>
+      <h2 id="survey-modal-title">Isi survei</h2>
+      <p class="dialog-intro">Jawaban tersimpan hanya pada perangkat ini.</p>
+     </div><button type="button" class="icon-button" data-close-modal="" aria-label="Tutup formulir survei">×</button>
     </div>
-  </aside>
-</div></section>
-<main class="wrap">
-<div class="notice"><div class="notice-icon">i</div><div><b>Sistem Aktif:</b> Seluruh data partisipan, survei berkala, dan rekapitulasi penugasan dikelola secara terpusat untuk memastikan efektivitas program pemberdayaan UMKM GoTo.</div></div>
-<div class="tabs" role="tablist"><button class="tab active" data-tab="journey" onclick="goTab('journey')">01 · Perjalanan Mitra</button><button class="tab" data-tab="survey" onclick="goTab('survey')">02 · Survei & Check-in</button><button class="tab" data-tab="mentor" onclick="goTab('mentor')">03 · Pendampingan Mentor</button><button class="tab" data-tab="dashboard" onclick="goTab('dashboard')">04 · Dashboard CSR</button></div>
-
-<section id="panel-journey" class="panel active">
- <div class="section-head"><div><div class="kicker">Modul 01 · Mitra UMKM</div><h2>Perjalanan praktik 90 hari</h2><p>Pilih kendala utama usaha, jalankan misi kecil secara terstruktur, dan konsultasikan hambatan langsung kepada mentor.</p></div><span class="status" id="journeyStatus">Perjalanan dimulai</span></div>
- <div class="grid grid-2">
-  <div class="card"><div class="card-head"><div class="iconbox">◎</div><div><h3>Profil partisipan</h3><p>Gunakan kode unik partisipan untuk sinkronisasi data.</p></div></div>
-   <div class="field"><label for="participantCode">Kode peserta</label><input id="participantCode" maxlength="24" placeholder="Contoh: UMKM-JKT-01" value="UMKM-JKT-01" oninput="syncParticipantCode(this.value)"></div>
-   <div class="field"><label for="programName">Program yang diikuti</label><select id="programName"><option>Pojok Belajar</option><option>KOMPAG</option></select></div>
-   <div class="field"><label for="region">Wilayah</label><select id="region"><option>Jakarta</option><option>Makassar</option><option>Malang</option><option>Sukabumi</option><option>Serang</option><option>Wilayah lainnya</option></select></div>
-   <div class="field"><label>Pilih kendala utama usaha</label><div class="grid grid-2" id="needChoices"><button type="button" class="choice selected" data-need="keuangan" onclick="chooseNeed('keuangan',this)">▤ Pencatatan keuangan<small>Catat pemasukan & pengeluaran</small></button><button type="button" class="choice" data-need="promosi" onclick="chooseNeed('promosi',this)">↗ Promosi digital<small>Perluas jangkauan online</small></button><button type="button" class="choice" data-need="operasional" onclick="chooseNeed('operasional',this)">◷ Operasional usaha<small>Manajemen stok & alur kerja</small></button><button type="button" class="choice" data-need="pelanggan" onclick="chooseNeed('pelanggan',this)">♡ Layanan pelanggan<small>Kepuasan & relasi pembeli</small></button></div></div>
-   <label class="checkline"><input id="consent" type="checkbox" checked><span>Saya menyetujui pengumpulan data perkembangan usaha ini digunakan untuk evaluasi program pemberdayaan dan peningkatan layanan pendampingan.</span></label>
-   <button class="btn btn-primary" onclick="saveProfile()">Simpan & sinkronkan profil →</button>
+    <form id="survey-form" novalidate="">
+     <div class="grid-2">
+      <div class="field"><label for="survey-code">Kode peserta</label><input id="survey-code" readonly="" required="">
+      </div>
+      <div class="field"><label for="survey-stage">Tahap evaluasi</label><input id="survey-stage" readonly="">
+      </div>
+     </div>
+     <div class="field"><label for="survey-obstacle">Kendala yang dihadapi</label><textarea id="survey-obstacle" placeholder="Ceritakan kendala yang paling terasa"></textarea>
+     </div>
+     <div class="field"><label for="survey-application">Penerapan materi pelatihan</label><select id="survey-application" required=""><option value="">Pilih tingkat penerapan</option><option>Belum mulai</option><option>Sebagian besar</option><option>Sudah diterapkan</option></select>
+     </div>
+     <div class="field"><label for="survey-skill">Perkembangan keterampilan usaha (1–5)</label><select id="survey-skill" required=""><option value="">Pilih nilai</option><option value="1">1 — Belum berkembang</option><option value="2">2 — Mulai berkembang</option><option value="3">3 — Cukup berkembang</option><option value="4">4 — Berkembang</option><option value="5">5 — Sangat berkembang</option></select>
+     </div>
+     <div class="field"><label for="survey-revenue">Omzet bulanan (Rp, opsional)</label><input id="survey-revenue" type="number" min="0" step="1" inputmode="numeric" placeholder="Kosongkan jika tidak ingin mengisi"><small>Data ini sensitif. Nilai individual tidak ditampilkan di dashboard dan hanya dapat digunakan secara agregat jika respons memadai.</small>
+     </div>
+     <div class="field"><label class="flex items-start gap-2 font-normal" for="survey-consent"><input id="survey-consent" type="checkbox" class="mt-1" style="width:17px;height:17px;min-height:0;accent-color:#078b43"><span>Saya setuju jawaban ini disimpan pada perangkat ini untuk evaluasi program.</span></label>
+     </div>
+     <p id="survey-error" role="alert" class="text-red-700 text-sm mb-3" hidden=""></p>
+     <div class="button-row"><button type="submit" class="btn btn-primary">Simpan jawaban</button><button type="button" class="btn btn-light" data-close-modal="">Batal</button>
+     </div>
+    </form>
+   </div>
   </div>
-  <div class="card"><div class="card-head"><div class="iconbox">↗</div><div><h3>Progres misi aktif</h3><p>Penyelarasan data otomatis tersimpan di perangkat.</p></div></div><div style="display:flex;align-items:end;justify-content:space-between;gap:12px"><div><div style="font-size:34px;font-weight:900;color:var(--dark);letter-spacing:-1px" id="progressNumber">0%</div><div class="small muted">Misi selesai</div></div><span class="status" id="missionCount">0 dari 6 misi</span></div><div class="progress-track"><div class="progress-fill" id="mainProgress" style="width:0%"></div></div><p class="small">Centang misi setelah tahapan selesai dijalankan dalam operasional harian usaha.</p><div class="divider"></div><div class="grid grid-3"><div><div class="kicker">Fase 1</div><strong>Hari 1–30</strong><p class="small">Mulai praktik</p></div><div><div class="kicker">Fase 2</div><strong>Hari 31–60</strong><p class="small">Konsistensi</p></div><div><div class="kicker">Fase 3</div><strong>Hari 61–90</strong><p class="small">Evaluasi hasil</p></div></div></div>
- </div>
- <div style="margin-top:18px"><div class="section-head"><div><div class="kicker">Daftar Misi</div><h2 id="missionTitle">Kendala: Pencatatan keuangan</h2><p id="missionIntro">Tugas praktis yang dirancang agar langsung bisa diterapkan pada usaha.</p></div></div><div id="missionList"></div></div>
-</section>
-
-<section id="panel-survey" class="panel">
- <div class="section-head"><div><div class="kicker">Modul 02 · Evaluasi berkala</div><h2>Survei awal, check-in, dan survei akhir</h2><p>Pantau perkembangan indikator usaha dari hari ke-0 hingga hari ke-90 menggunakan kode partisipan yang sama.</p></div><span class="badge-live">PORTAL RESMI</span></div>
- <div class="grid grid-2">
-  <div class="card"><div class="card-head"><div class="iconbox">▤</div><div><h3>Formulir survei</h3><p>Data terhubung otomatis dengan profil partisipan.</p></div></div>
-   <div class="field"><label for="surveyCodeDisplay">Kode peserta (Sinkron)</label><input id="surveyCodeDisplay" readonly style="background:#f0f5f1;font-weight:800;" value="UMKM-JKT-01"></div>
-   <div class="field"><label for="surveyStage">Tahapan evaluasi</label><select id="surveyStage"><option value="awal">Survei awal · Hari ke-0</option><option value="30">Check-in · Hari ke-30</option><option value="60">Check-in · Hari ke-60</option><option value="akhir">Survei akhir · Hari ke-90</option></select></div>
-   <div class="field"><label for="applySkill">Apakah Anda telah menerapkan materi pelatihan?</label><select id="applySkill"><option value="">Pilih jawaban</option><option value="ya">Ya, sudah diterapkan sepenuhnya</option><option value="sebagian">Sebagian diterapkan</option><option value="belum">Belum</option></select></div>
-   <div class="field-row"><div class="field"><label for="monthlyRevenue">Omzet bulanan rata-rata (Rp)</label><input id="monthlyRevenue" type="number" min="0" placeholder="Contoh: 7500000"></div><div class="field"><label for="skillConfidence">Keyakinan penerapan materi (1–5)</label><select id="skillConfidence"><option value="">Pilih skor</option><option value="1">1 · Belum yakin</option><option value="2">2</option><option value="3">3 · Cukup yakin</option><option value="4">4</option><option value="5">5 · Sangat yakin</option></select></div></div>
-   <div class="field"><label for="surveyNote">Catatan perkembangan usaha (opsional)</label><textarea id="surveyNote" placeholder="Tuliskan capaian atau kendala yang dihadapi..."></textarea></div>
-   <button class="btn btn-primary" onclick="saveSurvey()">Kirim hasil evaluasi →</button>
-  </div>
-  <div class="card"><div class="card-head"><div class="iconbox">✓</div><div><h3>Riwayat evaluasi partisipan</h3><p>Rekapitulasi entri data berdasarkan kode aktif.</p></div></div><div id="surveyHistory"><div class="empty">Belum ada riwayat survei tersimpan.</div></div><div class="callout" style="margin-top:14px">Informasi omzet bersifat konfidensial dan hanya ditampilkan dalam bentuk agregat untuk laporan dampak CSR.</div></div>
- </div>
-</section>
-
-<section id="panel-mentor" class="panel">
- <div class="section-head"><div><div class="kicker">Modul 03 · Konsultasi</div><h2>Ruang konsultasi mentor ahli</h2><p>Konsultasikan kendala operasional secara langsung kepada mentor pendamping untuk mendapatkan solusi cepat.</p></div><span class="status">Sesi aktif</span></div>
- <div class="grid grid-2">
-  <div class="card"><div class="card-head"><div class="iconbox">✉</div><div><h3>Ajukan pertanyaan</h3><p>Kirimkan kendala spesifik yang Anda hadapi di lapangan.</p></div></div><div class="field"><label for="questionTopic">Topik konsultasi</label><select id="questionTopic"><option>Pencatatan keuangan</option><option>Promosi digital</option><option>Operasional usaha</option><option>Layanan pelanggan</option><option>Lainnya</option></select></div><div class="field"><label for="questionText">Pesan / kendala</label><textarea id="questionText" placeholder="Contoh: Bagaimana cara terbaik menghitung HPP produk makanan saya?"></textarea></div><button class="btn btn-primary" onclick="sendQuestion()">Kirim ke mentor →</button></div>
-  <div class="card"><div class="card-head"><div class="iconbox">☷</div><div><h3>Riwayat konsultasi & respons</h3><p>Daftar konsultasi beserta catatan tindak lanjut mentor.</p></div></div><div id="questionHistory"><div class="empty">Belum ada pertanyaan terkirim.</div></div></div>
- </div>
- <div class="card" style="margin-top:16px"><div class="card-head"><div class="iconbox">♧</div><div><h3>Panel pemantauan mentor</h3><p>Ringkasan aktivitas penanganan konsultasi masuk.</p></div></div><div id="mentorSummary" class="grid grid-3"></div></div>
-</section>
-
-<section id="panel-dashboard" class="panel">
- <div class="section-head"><div><div class="kicker">Modul 04 · Laporan & Monitoring CSR</div><h2>Dashboard evaluasi dampak program</h2><p>Analisis komprehensif tingkat adopsi keterampilan, penyelesaian misi, dan sebaran wilayah mitra binaan.</p></div><button class="btn btn-outline" onclick="exportCSV()">↓ Ekspor laporan CSV</button></div>
- <div id="dashboardWarning" class="callout hidden" style="margin-bottom:16px;background:#fdf2f2;border-color:#f5c6cb;color:#721c24;"><b>Perhatian Metodologis:</b> Jumlah responden saat ini masih terbatas. Hindari penarikan kesimpulan kausal mutlak terhadap perubahan omzet sebelum siklus 90 hari selesai secara menyeluruh.</div>
- <div class="stats" id="dashboardStats"></div>
- <div class="grid grid-2" style="margin-top:16px">
-  <div class="card"><div class="card-head"><div class="iconbox">▥</div><div><h3>Kelengkapan evaluasi</h3><p>Persentase partisipan dengan data survei lengkap.</p></div></div><div id="completionSummary"></div></div>
-  <div class="card"><div class="card-head"><div class="iconbox">⌖</div><div><h3>Jangkauan wilayah</h3><p>Sebaran geografis mitra dampingan program.</p></div></div><div id="regionSummary"></div></div>
- </div>
- <div class="card" style="margin-top:16px"><div class="card-head"><div class="iconbox">▤</div><div><h3>Data terpusat program</h3><p>Entri data real-time yang tersimpan pada sistem.</p></div></div><div class="table-wrap" id="dataTable"></div><div class="divider"></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-outline" onclick="loadDemo()">Muat sampel data awal</button><button class="btn btn-outline" onclick="clearDemo()">Reset seluruh data</button></div></div>
- <p class="small muted" style="margin-top:12px">Catatan metodologis: Platform ini menyediakan instrumen pemantauan terstandar untuk mengukur efektivitas intervensi pelatihan terhadap kemandirian usaha mikro.</p>
-</section>
-</main>
-<footer><div class="wrap footer-inner"><div><div class="footer-brand">GoTo Impact Journey</div><div>Platform Pemberdayaan & Evaluasi CSR UMKM</div></div><div>ZERO BARRIERS, MORE OPPORTUNITIES. <br><span class="small">Go Together, Go Far · Inisiatif Strategis Pengembangan Ekosistem UMKM.</span></div></div></footer>
-<div class="dots"></div><div id="toast" class="toast" role="status" aria-live="polite"></div>
-<script>
-const STORE='gotoImpactJourney_v2';
-const defaultState={profile:{code:'UMKM-JKT-01',program:'Pojok Belajar',region:'Jakarta',need:'keuangan'},missions:{},surveys:[],questions:[]};
-let state=loadState();let selectedNeed=state.profile.need||'keuangan';
-const missionSets={
- keuangan:{title:'Kendala: Pencatatan keuangan',intro:'Bangun kedisiplinan pencatatan dan analisis arus kas usaha secara berkala.',phases:[{name:'Fase 1 · Mulai praktik',range:'Hari 1–30',items:[['pisah-uang','Pisahkan keuangan pribadi dan usaha.','Gunakan rekening atau wadah terpisah untuk menghindari percampuran dana.'],['catat-harian','Lakukan pencatatan arus kas harian.','Catat seluruh transaksi masuk dan keluar secara tertib.']]},{name:'Fase 2 · Konsistensi',range:'Hari 31–60',items:[['kelompok-biaya','Klasifikasikan pos pengeluaran usaha.','Pisahkan biaya bahan baku, operasional, dan pemasaran.'],['hitung-laba','Hitung laba bersih secara berkala.','Lakukan rekapitulasi laba mingguan.']]},{name:'Fase 3 · Evaluasi hasil',range:'Hari 61–90',items:[['ringkasan-bulanan','Susun laporan ringkasan bulanan.','Evaluasi total omzet dan efisiensi biaya.'],['rencana-perbaikan','Terapkan strategi efisiensi baru.','Ambil keputusan bisnis berdasarkan data pembukuan.']]}]},
- promosi:{title:'Kendala: Promosi digital',intro:'Optimalkan jangkauan pasar melalui strategi pemasaran digital yang konsisten.',phases:[{name:'Fase 1 · Persiapan',range:'Hari 1–30',items:[['pilih-produk','Tentukan produk unggulan utama.','Fokuskan promosi pada produk dengan margin terbaik.'],['foto-produk','Hasilkan konten visual produk berkualitas.','Pastikan pencahayaan dan deskripsi produk jelas.']]},{name:'Fase 2 · Eksekusi',range:'Hari 31–60',items:[['jadwal-promosi','Buat kalender konten promosi rutin.','Tentukan jadwal posting di media sosial atau marketplace.'],['uji-pesan','Eksplorasi sudut pandang penawaran unik.','Amati respons audiens terhadap materi promosi.']]},{name:'Fase 3 · Evaluasi',range:'Hari 61–90',items:[['analisis-respon','Evaluasi interaksi dan konversi calon pembeli.','Catat materi promosi yang paling diminati.'],['skala-strategi','Fokuskan anggaran atau tenaga pada kanal efektif.','Tingkatkan konsistensi promosi digital.']]}]},
- operasional:{title:'Kendala: Operasional usaha',intro:'Tingkatkan efisiensi kerja melalui manajemen alur dan persediaan yang rapi.',phases:[{name:'Fase 1 · Pemetaan',range:'Hari 1–30',items:[['alur-kerja','Petakan tahapan operasional harian.','Identifikasi titik hambatan dalam proses produksi.'],['stok-opname','Lakukan pencatatan inventaris awal.','Ketahui kepastian jumlah bahan baku yang tersedia.']]},{name:'Fase 2 · Standardisasi',range:'Hari 31–60',items:[['jadwal-stok','Terapkan jadwal pengecekan stok berkala.','Cegah kehabisan bahan baku penting.'],['eliminasi-pemborosan','Kurangi waktu tunggu atau bahan terbuang.','Optimalkan tata letak tempat usaha.']]},{name:'Fase 3 · Peningkatan',range:'Hari 61–90',items:[['uji-standar','Uji coba prosedur kerja baru.','Nilai peningkatan kecepatan pelayanan.'],['evaluasi-operasional','Dokumentasikan SOP sederhana untuk usaha.','Pastikan kualitas operasional terjaga konsisten.']]}]},
- pelanggan:{title:'Kendala: Layanan pelanggan',intro:'Perkuat loyalitas pembeli melalui standar komunikasi dan penanganan yang prima.',phases:[{name:'Fase 1 · Pemahaman',range:'Hari 1–30',items:[['analisis-keluhan','Catat pertanyaan atau kendala pelanggan tersering.','Identifikasi area pelayanan yang perlu ditingkatkan.'],['standar-komunikasi','Susun template balasan cepat yang ramah.','Pastikan informasi produk dan harga akurat.']]},{name:'Fase 2 · Implementasi',range:'Hari 31–60',items:[['respon-cepat','Tingkatkan kecepatan tanggap pesan pembeli.','Berikan pelayanan yang solutif.'],['tanya-ulasan','Minta ulasan atau masukan dari pelanggan setia.','Gunakan masukan untuk evaluasi kualitas.']]},{name:'Fase 3 · Loyalitas',range:'Hari 61–90',items:[['program-khusus','Berikan apresiasi kepada pelanggan berulang.','Bangun hubungan jangka panjang.'],['evaluasi-layanan','Tinjau tingkat kepuasan pelanggan secara keseluruhan.','Pastikan standar pelayanan terus meningkat.']]}]}
-};
-function loadState(){try{const v=JSON.parse(localStorage.getItem(STORE));return v?{...defaultState,...v,profile:{...defaultState.profile,...v.profile}}:structuredClone(defaultState)}catch(e){return structuredClone(defaultState)}}
-function persist(){try{localStorage.setItem(STORE,JSON.stringify(state))}catch(e){} renderAll()}
-function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.classList.remove('show'),2500)}
-function goTab(name){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id==='panel-'+name));if(name==='dashboard')renderDashboard();if(name==='mentor')renderMentor();window.scrollTo({top:document.querySelector('main').offsetTop-85,behavior:'smooth'})}
-document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>goTab(b.dataset.tab)));
-document.getElementById('roleSelect').addEventListener('change',e=>{const r=e.target.value;if(r==='umkm')goTab('journey');if(r==='mentor')goTab('mentor');if(r==='admin')goTab('dashboard')});
-function chooseNeed(need,btn){selectedNeed=need;document.querySelectorAll('.choice').forEach(b=>b.classList.toggle('selected',b.dataset.need===need));renderMissions()}
-function syncParticipantCode(val){const code=val.trim();document.getElementById('surveyCodeDisplay').value=code||'UMKM-JKT-01';}
-function saveProfile(){const code=document.getElementById('participantCode').value.trim();if(!code){toast('Kode peserta wajib diisi.');return}if(!document.getElementById('consent').checked){toast('Persetujuan partisipan wajib dicentang.');return}state.profile={code,program:document.getElementById('programName').value,region:document.getElementById('region').value,need:selectedNeed};persist();toast('Profil dan kode partisipan berhasil disinkronkan.')}
-function renderMissions(){const set=missionSets[selectedNeed]||missionSets.keuangan;document.getElementById('missionTitle').textContent=set.title;document.getElementById('missionIntro').textContent=set.intro;const root=document.getElementById('missionList');root.innerHTML='';let total=0,done=0;set.phases.forEach(phase=>{const box=document.createElement('div');box.className='phase';const head=document.createElement('div');head.className='phase-head';head.innerHTML=`<strong>${phase.name}</strong><span>${phase.range}</span>`;box.appendChild(head);phase.items.forEach(item=>{total++;const isDone=!!state.missions[item[0]];if(isDone)done++;const row=document.createElement('label');row.className='mission'+(isDone?' done':'');row.innerHTML=`<input type="checkbox" ${isDone?'checked':''} aria-label="Tandai misi selesai"><div><strong>${item[1]}</strong><p>${item[2]}</p></div>`;row.querySelector('input').addEventListener('change',e=>{state.missions[item[0]]=e.target.checked;persist();toast(e.target.checked?'Misi ditandai selesai.':'Status misi diperbarui.')});box.appendChild(row)});root.appendChild(box)});const pct=total?Math.round(done/total*100):0;document.getElementById('progressNumber').textContent=pct+'%';document.getElementById('missionCount').textContent=`${done} dari ${total} misi`;document.getElementById('mainProgress').style.width=pct+'%';document.getElementById('journeyStatus').textContent=done===total?'Semua misi tuntas':done?'Sedang berjalan':'Perjalanan dimulai'}
-function saveSurvey(){const code=document.getElementById('participantCode').value.trim()||state.profile.code;if(!code){toast('Masukkan kode peserta pada modul sebelumnya.');return}const stage=document.getElementById('surveyStage').value;const apply=document.getElementById('applySkill').value;const revenue=document.getElementById('monthlyRevenue').value;const confidence=document.getElementById('skillConfidence').value;if(!apply||!confidence){toast('Pilih tingkat penerapan materi dan skor keyakinan.');return}if(revenue!==''&&Number(revenue)<0){toast('Omzet tidak boleh bernilai negatif.');return}const entry={id:Date.now(),code,stage,apply,revenue:revenue===''?null:Number(revenue),confidence:Number(confidence),note:document.getElementById('surveyNote').value.trim(),date:new Date().toLocaleDateString('id-ID')};state.surveys.push(entry);persist();toast('Data survei berhasil disimpan ke server lokal.');renderSurveys();document.getElementById('monthlyRevenue').value='';document.getElementById('surveyNote').value='';}
-function renderSurveys(){const box=document.getElementById('surveyHistory');if(!state.surveys.length){box.innerHTML='<div class="empty">Belum ada riwayat survei tersimpan.</div>';return}box.innerHTML=state.surveys.slice(-4).reverse().map(s=>`<div class="message"><strong>${s.code} · Tahap: ${s.stage.toUpperCase()} (${s.date})</strong>Penerapan: <b>${s.apply}</b> | Keyakinan: <b>${s.confidence}/5</b> ${s.revenue?(' | Omzet: Rp '+Number(s.revenue).toLocaleString('id-ID')):'-'} ${s.note?'<br><em>"'+s.note+'"</em>':''}</div>`).join('')}
-function sendQuestion(){const text=document.getElementById('questionText').value.trim();if(!text){toast('Tuliskan pertanyaan atau kendala terlebih dahulu.');return}const q={id:Date.now(),code:state.profile.code,topic:document.getElementById('questionTopic').value,text,reply:'Terima kasih atas pertanyaannya. Mentor akan segera meninjau dan memberikan arahan tindak lanjut dalam 1x24 jam.',date:new Date().toLocaleDateString('id-ID')};state.questions.push(q);persist();document.getElementById('questionText').value='';toast('Pertanyaan berhasil dikirim ke mentor.');renderMentor()}
-function renderMentor(){const box=document.getElementById('questionHistory');if(!state.questions.length){box.innerHTML='<div class="empty">Belum ada pertanyaan terkirim.</div>';return}box.innerHTML=state.questions.slice(-4).reverse().map(q=>`<div class="message"><strong>${q.code} · Topik: ${q.topic}</strong>${q.text}<div class="message reply"><strong>Respons Mentor</strong>${q.reply}</div></div>`).join('');const sum=document.getElementById('mentorSummary');sum.innerHTML=`<div class="stat"><span>Total Konsultasi</span><strong>${state.questions.length}</strong><small>Pertanyaan masuk</small></div><div class="stat"><span>Status Layanan</span><strong>Aktif</strong><small>Respon 24 Jam</small></div><div class="stat"><span>Mentor Tugas</span><strong>3 Ahli</strong><small>Siap mendampingi</small></div>`}
-function renderDashboard(){const totalSurveys=state.surveys.length;const uniqueCodes=new Set(state.surveys.map(s=>s.code)).size;const completedSurveys=state.surveys.filter(s=>s.stage==='akhir').length;const compRate=totalSurveys?Math.round((completedSurveys/Math.max(1,uniqueCodes))*100):0;const regions={};state.surveys.forEach(s=>{regions[state.profile.region]=(regions[state.profile.region]||0)+1});if(state.profile.region&&!regions[state.profile.region])regions[state.profile.region]=1;const regHtml=Object.keys(regions).length?Object.entries(regions).map(([r,c])=>`<div style="display:flex;justify-content:space-between;font-size:12px;padding:6px 0;border-bottom:1px solid #edf2ee"><span>${r}</span><b>${c} partisipan</b></div>`).join(''):'<div class="empty">Belum ada data wilayah.</div>';document.getElementById('regionSummary').innerHTML=regHtml;const warn=document.getElementById('dashboardWarning');if(totalSurveys<3){warn.classList.remove('hidden')}else{warn.classList.add('hidden')}document.getElementById('dashboardStats').innerHTML=`<div class="stat"><span>Partisipan Unik</span><strong>${uniqueCodes}</strong><small>Kode aktif</small></div><div class="stat"><span>Kelengkapan Survei</span><strong>${compRate}%</strong><small>Tahap akhir</small></div><div class="stat"><span>Total Entri Data</span><strong>${totalSurveys}</strong><small>Pencatatan survei</small></div><div class="stat"><span>Wilayah Aktif</span><strong>${Object.keys(regions).length}</strong><small>Area sebaran</small></div>`;document.getElementById('completionSummary').innerHTML=`<div style="font-size:13px;margin-bottom:8px">Kelengkapan survei awal dan akhir: <b>${compRate}%</b></div><div class="progress-track"><div class="progress-fill" style="width:${compRate}%"></div></div><p class="small muted">Data divalidasi berdasarkan kecocokan kode partisipan.</p>`;const table=document.getElementById('dataTable');if(!state.surveys.length){table.innerHTML='<div class="empty">Belum ada data terekam di sistem.</div>';return}table.innerHTML=`<table><thead><tr><th>Waktu</th><th>Kode Peserta</th><th>Tahap</th><th>Penerapan Materi</th><th>Keyakinan</th><th>Omzet (Rp)</th></tr></thead><tbody>${state.surveys.map(s=>`<tr><td>${s.date}</td><td><b>${s.code}</b></td><td>${s.stage}</td><td>${s.apply}</td><td>${s.confidence}/5</td><td>${s.revenue?Number(s.revenue).toLocaleString('id-ID'):'-'}</td></tr>`).join('')}</tbody></table>`}
-function loadDemo(){state.surveys=[{id:1,code:'UMKM-JKT-01',stage:'awal',apply:'sebagian',revenue:5000000,confidence:3,note:'Mulai memisahkan rekening.',date:'10/08/2026'},{id:2,code:'UMKM-JKT-01',stage:'30',apply:'ya',revenue:6200000,confidence:4,note:'Pencatatan harian mulai rutin.',date:'10/09/2026'},{id:3,code:'UMKM-JKT-01',stage:'akhir',apply:'ya',revenue:8000000,confidence:5,note:'Arus kas usaha jauh lebih teratur.',date:'10/10/2026'}];persist();toast('Sampel data berhasil dimuat.');renderDashboard()}
-function clearDemo(){state.surveys=[];state.questions=[];state.missions={};persist();toast('Data berhasil direset.');renderDashboard()}
-function exportCSV(){if(!state.surveys.length){toast('Tidak ada data untuk diekspor.');return}let csv='Waktu,KodePeserta,Tahap,Penerapan,Keyakinan,Omzet\n'+state.surveys.map(s=>[s.date,s.code,s.stage,s.apply,s.confidence,s.revenue||''].join(',')).join('\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='laporan_goto_impact_journey.csv';a.click();toast('Laporan CSV berhasil diunduh.')}
-function renderAll(){renderMissions();renderSurveys();renderMentor()}
-renderAll();
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script>
+(() => {
+  'use strict';
+  const KEY='goto-impact-journey-state-v1';
+  const participant={code:'UMKM-JKT-01',region:'Jakarta',program:'Impact Journey 2026'};
+  const normalizeRecommendedPath=value=>{const key=String(value||'').trim().toLowerCase().replace(/[–—]/g,'-').replace(/\s+/g,' ');if(key==='pencatatan keuangan'||key==='keuangan')return 'keuangan';if(key==='promosi digital'||key==='promosi')return 'promosi';if(key==='pemanfaatan alat digital'||key==='digital')return 'digital';return null};
+  const routes={beranda:'Beranda',kebutuhan:'Assessment','hasil-asesmen':'Hasil Assessment & Rekomendasi',misi:'Misi Praktik 90 Hari',survei:'Survei dan Evaluasi',csr:'Dashboard CSR dan Laporan'};
+  const needs=[
+    {id:'keuangan',name:'Pencatatan Keuangan',description:'Pencatatan pemasukan, pengeluaran, dan keuntungan.',recommendation:'Mulai dari catatan transaksi harian, lalu tinjau arus kas dan keuntungan secara berkala.',icon:'<path d="M4 3h16v18H4zM8 8h8M8 12h2m4 0h2M8 16h2m4 0h2"/>'},
+    {id:'promosi',name:'Promosi Digital',description:'Penggunaan kanal digital untuk memperkenalkan produk.',recommendation:'Siapkan profil produk, coba publikasi rutin, dan amati respons dari calon pelanggan.',icon:'<path d="m3 11 13-6v14L3 13zM16 9h2a3 3 0 0 1 0 6h-2M6 14l2 7h4l-2-6"/>'},
+    {id:'digital',name:'Pemanfaatan Alat Digital',description:'Penggunaan aplikasi untuk pencatatan dan pengelolaan pesanan.',recommendation:'Petakan alur kerja, catat stok, lalu kurangi hambatan yang paling sering muncul.',icon:'<path d="m3 7 9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10"/>'},
+    {id:'layanan',name:'Layanan Pelanggan',description:'Peningkatan kualitas komunikasi dan pelayanan.',recommendation:'Tinjau pengalaman pelanggan, latih respons, dan catat masukan untuk perbaikan layanan.',icon:'<path d="M4 5h16v12H9l-5 4zM8 10h8M8 13h5"/>'}
+  ];
+  const phaseNames=['Memulai Praktik','Membangun Konsistensi','Evaluasi dan Perbaikan'];
+  const missionData={
+    keuangan:[
+      [['Catat kondisi awal keuangan','Tuliskan sumber pemasukan dan pengeluaran saat ini.'],['Buat kebiasaan mencatat transaksi','Pilih waktu tetap untuk mencatat transaksi harian.'],['Coba format buku kas sederhana','Pisahkan pemasukan dan pengeluaran dalam satu catatan.'],['Catat kendala pencatatan','Tulis transaksi yang sulit dicatat dan penyebabnya.']],
+      [['Catat transaksi secara berkala','Perbarui buku kas setiap hari atau pekan.'],['Periksa hasil pencatatan','Bandingkan pemasukan dan pengeluaran yang tercatat.'],['Bahas kendala kas dengan mentor','Ajukan pertanyaan tentang transaksi yang belum jelas.'],['Simpan bukti praktik keuangan','Tuliskan contoh perhitungan dan temuan penting.']],
+      [['Rapikan catatan keuangan','Lengkapi transaksi yang masih terlewat.'],['Tinjau keterampilan menghitung keuntungan','Periksa kemampuan membedakan omzet, biaya, dan keuntungan.'],['Susun refleksi keuangan akhir','Catat perubahan kebiasaan selama program.'],['Tentukan langkah pencatatan berikutnya','Pilih rutinitas keuangan yang akan dipertahankan.']]
+    ],
+    promosi:[
+      [['Catat kondisi awal promosi','Daftar kanal digital dan materi produk yang sudah dimiliki.'],['Buat kebiasaan publikasi','Tentukan jadwal unggahan yang realistis.'],['Coba satu materi promosi','Publikasikan foto atau deskripsi produk yang jelas.'],['Catat kendala promosi','Tulis hambatan saat menyiapkan atau membagikan konten.']],
+      [['Publikasikan konten berkala','Coba jadwal konten yang telah dibuat.'],['Periksa respons pelanggan','Amati pertanyaan atau tanggapan yang masuk.'],['Bahas kendala kanal dengan mentor','Minta saran untuk memperbaiki pesan promosi.'],['Simpan contoh konten dan hasil','Catat konten yang dibuat serta responsnya.']],
+      [['Perbaiki materi promosi','Perjelas manfaat dan ajakan pada konten berikutnya.'],['Tinjau keterampilan promosi','Nilai kemampuan membuat dan mengevaluasi konten.'],['Susun refleksi promosi akhir','Ringkas praktik yang paling membantu.'],['Tentukan rencana kanal berikutnya','Pilih kanal dan jadwal untuk dilanjutkan.']]
+    ],
+    digital:[
+      [['Petakan kondisi operasional','Catat alur stok dan aktivitas usaha saat ini.'],['Buat kebiasaan cek stok','Tentukan waktu pengecekan persediaan.'],['Coba daftar stok sederhana','Tuliskan barang masuk, keluar, dan tersisa.'],['Catat kendala operasional','Temukan langkah kerja yang sering terhambat.']],
+      [['Perbarui catatan stok berkala','Cocokkan persediaan fisik dengan catatan.'],['Periksa hasil alur kerja','Amati bagian proses yang berjalan lebih lancar.'],['Bahas hambatan dengan mentor','Minta masukan untuk kendala stok atau proses.'],['Simpan bukti perbaikan proses','Catat perubahan alur dan hasil pengamatan.']],
+      [['Selesaikan perbaikan stok','Rapikan data barang dan rutinitas pengecekan.'],['Tinjau keterampilan operasional','Nilai kemampuan mengelola stok dan kegiatan.'],['Susun refleksi operasional','Ringkas perbaikan yang berhasil dicoba.'],['Tentukan langkah kerja berikutnya','Pilih prosedur yang akan diterapkan terus.']]
+    ],
+    layanan:[
+      [['Catat kondisi awal layanan','Tulis cara menangani pertanyaan pelanggan saat ini.'],['Buat kebiasaan merespons','Tentukan standar waktu dan gaya balasan.'],['Coba panduan komunikasi','Gunakan jawaban yang jelas dan ramah.'],['Catat kendala pelayanan','Tulis situasi pelanggan yang sulit ditangani.']],
+      [['Latih respons pelanggan berkala','Terapkan panduan pada pertanyaan yang masuk.'],['Periksa hasil pelayanan','Amati masukan dan pertanyaan berulang.'],['Bahas kasus dengan mentor','Minta saran untuk situasi layanan yang menantang.'],['Simpan catatan interaksi','Tuliskan contoh perbaikan dan masukan pelanggan.']],
+      [['Perbaiki panduan layanan','Perbarui jawaban dari pengalaman sebelumnya.'],['Tinjau keterampilan komunikasi','Nilai kemampuan memahami dan membantu pelanggan.'],['Susun refleksi layanan akhir','Ringkas perubahan dalam cara melayani.'],['Tentukan langkah layanan berikutnya','Pilih kebiasaan yang akan dipertahankan.']]
+    ]
+  };
+  const stages=[{id:'awal',name:'Survei Awal',day:'Hari ke-0'},{id:'hari30',name:'Check-in',day:'Hari ke-30'},{id:'hari60',name:'Check-in',day:'Hari ke-60'},{id:'akhir',name:'Survei Akhir',day:'Hari ke-90'}];
+  const blankFilters=()=>({region:'semua',program:'semua',phase:'semua',survey:'semua'});
+  const freshState=()=>({participant:{...participant},profile:{businessName:'',ownerName:'',businessCategory:'',city:''},activeNeed:null,recommendedPath:null,assessmentAnswers:null,assessmentResult:null,taskCompletion:{},practiceNotes:{},surveys:{},consultations:[],selectedFilters:blankFilters(),currentRole:'Mitra'});
+  let state=loadState(),openSurvey=null,lastFocus=null,toastTimer;
+  const $=id=>document.getElementById(id);
+  const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function loadState(){
+    try{
+      const raw=localStorage.getItem(KEY);if(!raw)return freshState();
+      const x=JSON.parse(raw);if(!x||typeof x!=='object')return freshState();
+      const answers=Array.isArray(x.assessmentAnswers)?x.assessmentAnswers.map(String):null;const savedResult=x.assessmentResult&&typeof x.assessmentResult==='object'?x.assessmentResult:null;const canonical=normalizeRecommendedPath(savedResult?.recommendedPath||x.recommendedPath||x.activeNeed);return {...freshState(),...x,participant:{...participant},assessmentAnswers:answers,assessmentResult:savedResult&&canonical?{...savedResult,recommendedPath:canonical}:null,recommendedPath:canonical,activeNeed:canonical||normalizeRecommendedPath(x.activeNeed),taskCompletion:x.taskCompletion&&typeof x.taskCompletion==='object'?x.taskCompletion:{},practiceNotes:x.practiceNotes&&typeof x.practiceNotes==='object'?x.practiceNotes:{},surveys:x.surveys&&typeof x.surveys==='object'?x.surveys:{},consultations:Array.isArray(x.consultations)?x.consultations:[],selectedFilters:{...blankFilters(),...(x.selectedFilters||{})},currentRole:['Mitra','Mentor','CSR'].includes(x.currentRole)?x.currentRole:'Mitra'};
+    }catch(e){return freshState()}
+  }
+  // Integrasi backend mendatang dapat menggantikan loadState/saveState dengan kontrol akses sesuai peran.
+  function saveState(){try{localStorage.setItem(KEY,JSON.stringify(state));toast('Perubahan tersimpan di perangkat ini');return true}catch(e){toast('Penyimpanan perangkat tidak tersedia. Jawaban belum berhasil disimpan.');return false}}
+  function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),3600)}
+  const activeRecommendedPath=()=>normalizeRecommendedPath(state.recommendedPath||state.activeNeed);
+  const need=()=>needs.find(n=>n.id===activeRecommendedPath());
+  const doneCount=()=>{const prefix=`${activeRecommendedPath()||'unknown'}-`;return Object.keys(state.taskCompletion).filter(k=>k.startsWith(prefix)&&state.taskCompletion[k]).length};
+  const percent=(part,total)=>total?Math.round(part/total*100):0;
+  const taskKey=(needId,p,i)=>`${needId||state.activeNeed||'unknown'}-${p}-${i}`;
+  const phaseDone=p=>Array.from({length:4},(_,i)=>!!state.taskCompletion[taskKey(state.activeNeed,p,i)]).filter(Boolean).length;
+  const activePhase=()=>doneCount()<4?1:doneCount()<8?2:3;
+  const dateFormat=v=>{if(!v)return '—';const d=new Date(v);return Number.isNaN(d.getTime())?'—':new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(d)};
+  function metric(label,value,sub){return `<div class="card metric"><div class="metric-label">${escapeHTML(label)}</div><div class="metric-value">${escapeHTML(value)}</div><div class="metric-sub">${escapeHTML(sub)}</div></div>`}
+  function go(route){if(!routes[route])route='beranda';if(location.hash!=='#'+route)location.hash=route;renderRoute(route)}
+  function renderRoute(route){
+    if(!routes[route])route='beranda';
+    document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+route));
+    document.querySelectorAll('.nav-btn').forEach(b=>{b.classList.toggle('active',b.dataset.route===route);if(b.dataset.route===route)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
+    $('top-title').textContent=routes[route];closeDrawer();window.scrollTo(0,0);
+  }
+  function renderHome(){
+    const journey=['Identifikasi Kebutuhan','Praktik','Pendampingan','Evaluasi'];
+    $('journey-steps').innerHTML=journey.map((v,i)=>`<div class="step ${i===0&&need()||i===1&&doneCount()||i===2&&state.consultations.length||i===3&&Object.keys(state.surveys).length?'on':''}"><span class="step-dot">${i+1}</span><strong>${v}</strong><small>${['Pilih fokus','Jalankan misi','Diskusi mentor','Tinjau hasil'][i]}</small></div>`).join('');
+    $('home-progress-bar').style.width=percent(doneCount(),12)+'%';$('home-progress-track').setAttribute('aria-valuenow',percent(doneCount(),12));
+    $('profile').innerHTML=[['Kode peserta',state.participant.code],['Wilayah',state.participant.region],['Fase aktif','Fase '+activePhase()],['Progres keseluruhan',percent(doneCount(),12)+'%'],['Evaluasi berikutnya',stages.find(s=>!state.surveys[s.id])?.day||'Semua terisi']].map(([k,v])=>`<div><span>${escapeHTML(k)}</span><strong>${escapeHTML(v)}</strong></div>`).join('');
+    $('home-metrics').innerHTML=metric('Kebutuhan aktif',need()?.name||'Belum dipilih','Fokus praktik saat ini')+metric('Misi selesai',`${doneCount()}/12`,'Tugas selama 90 hari')+metric('Survei terisi',`${stages.filter(s=>state.surveys[s.id]).length}/4`,'Tahap evaluasi')+metric('Konsultasi terbuka',state.consultations.filter(c=>c.status!=='Selesai').length,'Termasuk menunggu respons');
+  }
+  function renderNeeds(){
+    if(!$('needs-grid'))return;
+    $('needs-grid').innerHTML=needs.map(n=>`<article class="card need-card ${state.activeNeed===n.id?'chosen':''}"><div class="need-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${n.icon}</svg></div>${state.activeNeed===n.id?'<span class="active-tag">✓ Kebutuhan aktif</span>':''}<h3>${n.name}</h3><p>${n.description}</p><button type="button" class="btn ${state.activeNeed===n.id?'btn-light':'btn-primary'}" data-need="${n.id}">${state.activeNeed===n.id?'Dipilih':'Pilih Kebutuhan'}</button></article>`).join('');
+    $('need-recommendation').innerHTML=`<span class="pill">Rekomendasi praktik</span><h2>${need()?escapeHTML(need().name):'Mulai dengan memilih kebutuhan'}</h2><p>${need()?escapeHTML(need().recommendation):'Pilih satu kartu di atas untuk melihat rekomendasi misi yang sesuai.'}</p><button type="button" class="btn btn-primary" data-route="misi">Lanjut ke Misi Praktik</button>`;
+  }
+  function renderMissions(){
+    if(!need()){
+      $('mission-overview').innerHTML='<div class="notice">Selesaikan Asesmen Awal terlebih dahulu untuk mendapatkan jalur rekomendasi dan membuka misi praktik yang sesuai.</div>';
+      $('milestones').innerHTML=['Fase 1 — Hari 1–30','Fase 2 — Hari 31–60','Fase 3 — Hari 61–90'].map((s,i)=>`<div class="step"><span class="step-dot">${i+1}</span><strong>${s}</strong><small>Menunggu jalur aktif</small></div>`).join('');
+      $('phases').innerHTML='';$('program-completion')?.remove();return;
+    }
+    $('mission-overview').innerHTML=`<div class="flex flex-wrap items-center justify-between gap-3 mb-4"><h2 class="text-xl font-bold">${escapeHTML(need().name)}</h2><div class="text-right"><strong class="display text-3xl">${percent(doneCount(),12)}%</strong><div class="text-xs text-gray-600">(${doneCount()} dari 12 misi selesai)</div></div></div><div class="progress" role="progressbar" aria-label="Progres semua misi" aria-valuenow="${percent(doneCount(),12)}" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:${percent(doneCount(),12)}%"></div></div>`;
+    $('milestones').innerHTML=['Fase 1 — Hari 1–30','Fase 2 — Hari 31–60','Fase 3 — Hari 61–90'].map((s,i)=>`<div class="step ${doneCount()>=((i+1)*4)?'on':''}"><span class="step-dot">${i+1}</span><strong>${s}</strong><small>${phaseNames[i]}</small></div>`).join('');
+    const chosen=missionData[activeRecommendedPath()];
+    const evaluationReady=doneCount()===12;
+    if(!Array.isArray(chosen)||chosen.length!==3||chosen.some(tasks=>!Array.isArray(tasks)||tasks.length!==4||tasks.some(task=>!Array.isArray(task)||task.length<2))){$('mission-overview').innerHTML='<div class="notice"><strong>Data misi belum valid.</strong><p class="mt-2 mb-0">Daftar resmi 12 misi untuk jalur ini belum tersedia lengkap. Selesaikan asesmen kembali atau hubungi pengelola program.</p></div>';$('milestones').innerHTML='';$('phases').innerHTML='';return}
+    const previouslyOpen=[...document.querySelectorAll('#phases > details')].map(d=>d.open);
+    $('phases').innerHTML=chosen.map((tasks,p)=>`<details class="phase card ${p===activePhase()-1?'phase-active':''}" ${previouslyOpen.length?(previouslyOpen[p]?'open':''):(p===activePhase()-1?'open':'')}><summary><div><h2>Fase ${p+1} — Hari ${p*30+1}–${(p+1)*30}: ${phaseNames[p]}</h2><small>${phaseDone(p)}/4 misi selesai</small></div><div class="phase-progress">${percent(phaseDone(p),4)}%<div class="progress mt-2"><div class="progress-fill" style="width:${percent(phaseDone(p),4)}%"></div></div></div></summary><div class="phase-body">${tasks.map(([title,desc],i)=>{const key=taskKey(state.activeNeed,p,i),done=!!state.taskCompletion[key],note=state.practiceNotes[key]||'';return `<details class="task-card"><summary class="task"><span class="task-number">Misi ${p*4+i+1}</span><strong>${escapeHTML(title||'')}</strong><span class="status ${done?'done':note?'in-progress':''}">${done?'Selesai':note?'Sedang Dikerjakan':'Belum Selesai'}</span></summary><div class="task-body"><p>${escapeHTML(desc||'')}</p><div class="field"><label for="note-${key}">Catatan praktik misi ini</label><textarea id="note-${key}" data-note="${key}" placeholder="Catatan praktik akan diisi peserta">${escapeHTML(note)}</textarea><small>Catatan tersimpan saat Anda keluar dari kolom.</small></div><label class="task"><input type="checkbox" data-task="${key}" ${done?'checked':''}><span><strong>Tandai misi selesai</strong></span></label></div></details>`}).join('')}${phaseDone(p)===4?'<p class="notice mt-4">Fase ini selesai. Terima kasih sudah menuntaskan seluruh misi pada fase ini.</p>':''}</div></details>`).join('');
+    $('program-completion')?.remove();
+    const complete=doneCount()===12;
+    $('phases').insertAdjacentHTML('afterend',`<section id="program-completion" class="card pad mt-5"><div class="progress" role="progressbar" aria-label="Progres penyelesaian program" aria-valuenow="${percent(doneCount(),12)}" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:${percent(doneCount(),12)}%"></div></div><p class="text-sm mt-3 mb-3">${doneCount()}/12 Misi Selesai · ${percent(doneCount(),12)}%</p><p class="text-xs mt-3">${complete?'Semua misi selesai. Evaluasi akhir siap diisi.':'Selesaikan seluruh 12 misi untuk membuka evaluasi akhir.'}</p><section id="program-summary" class="mt-5" hidden><h2 class="text-xl font-bold">Program 90 Hari Selesai</h2><p class="text-sm mt-2">Jalur aktif: ${escapeHTML(need()?.name||'—')}</p><p class="text-sm">Jumlah misi selesai: 12 dari 12</p><p class="text-sm">Persentase penyelesaian: 100%</p><p class="text-sm mt-3">${Object.values(state.practiceNotes).filter(Boolean).length?escapeHTML(Object.values(state.practiceNotes).filter(Boolean).join(' ')):'Belum ada catatan praktik yang tersedia.'}</p><button type="button" id="back-to-missions" class="btn btn-light mt-4">Kembali ke Ringkasan Misi</button></section>${evaluationReady?'<div class="button-row mt-5"><button type="button" class="btn btn-primary" data-route="survei">Lihat Evaluasi</button></div>':''}</section>`);
+  }
+  function renderSurveys(){
+    const path=activeRecommendedPath(), names={keuangan:'Pencatatan Keuangan',promosi:'Promosi Digital',digital:'Pemanfaatan Alat Digital'};
+    if(doneCount()!==12){$('final-evaluation').innerHTML='<div class="notice"><strong>Evaluasi Akhir 90 Hari terkunci.</strong><p class="mt-2 mb-0">Selesaikan seluruh 12 misi terlebih dahulu untuk membuka evaluasi akhir.</p><button type="button" class="btn btn-primary mt-4" data-route="misi">Kembali ke Misi Praktik</button></div>';return}
+    const change=['Meningkat','Tetap','Menurun','Belum Dapat Menilai'], frequency=['Sangat rutin','Cukup rutin','Jarang','Belum Dapat Menilai'], condition=['Terpisah dengan baik','Sebagian terpisah','Belum terpisah','Belum Dapat Menilai'];
+    const radio=(name,items)=>items.map(v=>`<label><input type="radio" name="${name}" value="${v}" required><span>${v}</span></label>`).join('');
+    const question=(label,name,items=change)=>`<div class="assessment-question"><p>${label}</p><div class="assessment-options">${radio(name,items)}</div></div>`;
+    const general=[question('Bagaimana perubahan kemampuan Anda dalam mengelola usaha selama mengikuti program?','general-1'),question('Bagaimana perubahan keteraturan Anda dalam menjalankan kegiatan usaha?','general-2'),question('Bagaimana perubahan kemampuan Anda dalam mengambil keputusan terkait usaha?','general-3'),question('Apakah praktik yang dipelajari selama program masih Anda gunakan?','general-4',['Ya, seluruhnya','Ya, sebagian','Tidak','Belum Dapat Menilai']),question('Bagaimana perubahan kemudahan Anda dalam menjalankan kegiatan usaha?','general-5')].join('');
+    const specific=path==='keuangan'?[question('Bagaimana perubahan keteraturan pencatatan transaksi usaha Anda?','specific-1'),question('Bagaimana kondisi pemisahan uang usaha dan uang pribadi saat ini?','specific-2',condition),question('Bagaimana perubahan kemampuan Anda mengetahui kondisi keuangan usaha?','specific-3'),question('Bagaimana perubahan kemampuan Anda memperkirakan keuntungan dan biaya usaha?','specific-4'),question('Seberapa rutin Anda menggunakan catatan keuangan untuk mengambil keputusan usaha?','specific-5',frequency)].join(''):path==='promosi'?[question('Bagaimana perubahan konsistensi promosi digital usaha Anda?','specific-1'),question('Bagaimana perubahan kemampuan Anda membuat konten promosi digital?','specific-2'),question('Bagaimana perubahan kemampuan Anda menentukan sasaran promosi?','specific-3'),question('Bagaimana perubahan kemampuan Anda mengevaluasi hasil promosi digital?','specific-4'),question('Bagaimana perubahan jangkauan pelanggan melalui promosi digital?','specific-5')].join(''):path==='digital'?[question('Bagaimana perubahan penggunaan alat digital dalam kegiatan operasional usaha?','specific-1'),question('Bagaimana perubahan kemampuan Anda menggunakan alat digital untuk mengelola usaha?','specific-2'),question('Bagaimana perubahan kemudahan dalam menyelesaikan pekerjaan dengan bantuan alat digital?','specific-3'),question('Bagaimana perubahan kemampuan Anda memanfaatkan informasi digital untuk mengambil keputusan?','specific-4'),question('Seberapa rutin Anda menggunakan alat digital yang relevan dengan kebutuhan usaha?','specific-5',frequency)].join(''):'<p class="notice">Evaluasi khusus belum dapat ditampilkan karena jalur misi belum tersedia.</p>';
+    $('final-evaluation').innerHTML=`<p class="pill">Jalur misi: ${path?names[path]:'Jalur misi belum tersedia'}</p><form id="final-evaluation-form"><h2 class="section-head">Evaluasi Umum</h2>${general}<h2 class="section-head">Evaluasi Khusus — ${path?names[path]:'jalur belum tersedia'}</h2>${specific}<h2 class="section-head">Hambatan dan Keberlanjutan</h2><div class="field impact-field"><label>Apa kendala yang Anda hadapi selama menjalankan misi?</label><div class="obstacle-options">${['Keterbatasan waktu','Keterbatasan biaya','Kurangnya keterampilan','Keterbatasan perangkat atau internet','Kesulitan menerapkan materi','Tidak ada kendala berarti','Lainnya'].map(v=>`<label><input type="checkbox" name="obstacle" value="${v}"><span>${v}</span></label>`).join('')}</div><input id="other-obstacle" name="otherObstacle" placeholder="Jelaskan kendala lainnya" hidden></div><div class="field impact-field"><label for="benefit">Apa manfaat paling terasa dari program ini?</label><textarea id="benefit" class="impact-textarea" required></textarea></div><div class="field impact-field"><label>Apakah Anda akan melanjutkan praktik yang dipelajari setelah program selesai?</label><div class="sustainability-options">${radio('continuation',['Ya, seluruhnya','Ya, sebagian','Belum yakin','Tidak'])}</div></div><div class="field impact-field"><label for="support">Pendampingan atau bantuan apa yang masih Anda butuhkan?</label><textarea id="support" class="impact-textarea"></textarea></div><p id="final-evaluation-message" class="notice" hidden></p><button type="submit" class="btn btn-primary">Simpan &amp; Kirim Evaluasi →</button></form>`;
+    $('final-evaluation-form').addEventListener('change',e=>{if(e.target.value==='Lainnya')$('other-obstacle').hidden=!e.target.checked});
+  }
+  function renderMentor(){
+    const counts={Terbuka:0,'Menunggu respons':0,Selesai:0};state.consultations.forEach(c=>{if(counts[c.status]!==undefined)counts[c.status]++});
+    $('consult-metrics').innerHTML=metric('Terbuka',counts.Terbuka,'Pertanyaan baru')+metric('Menunggu respons',counts['Menunggu respons'],'Dalam tindak lanjut')+metric('Selesai',counts.Selesai,'Konsultasi ditutup')+metric('Total konsultasi',state.consultations.length,'Peserta '+state.participant.code);
+    $('mentor-intro').textContent=state.currentRole==='Mentor'?'Tinjau pertanyaan peserta dan catat respons serta tindak lanjutnya.':state.currentRole==='CSR'?'Ringkasan jumlah konsultasi per status. Isi pertanyaan tetap berada di tampilan pendampingan.':'Ajukan pertanyaan dan lihat perkembangan respons mentor pada perangkat ini.';
+    if(state.currentRole==='CSR'){$('consult-content').innerHTML='<p class="notice mt-5">Mode CSR menampilkan jumlah konsultasi saja. Pilih peran Mitra atau Mentor untuk melihat detail pendampingan.</p>';return}
+    let html='';
+    if(state.currentRole==='Mitra')html=`<div class="section-head"><h2>Kirim pertanyaan</h2></div><form id="question-form" class="card pad"><div class="grid-2"><div class="field"><label for="question-topic">Topik konsultasi</label><input id="question-topic" maxlength="80" required placeholder="Contoh: pencatatan transaksi"></div><div class="field"><label for="question-priority">Prioritas</label><select id="question-priority"><option>Normal</option><option>Tinggi</option></select></div></div><div class="field"><label for="question-text">Pertanyaan</label><textarea id="question-text" minlength="10" required placeholder="Jelaskan situasi dan bantuan yang Anda butuhkan"></textarea><small>Minimal 10 karakter.</small></div><p class="text-xs text-gray-600 mb-3">Pertanyaan disimpan di perangkat ini; respons mentor hanya tersedia jika peran Mentor digunakan di perangkat yang sama.</p><button type="submit" class="btn btn-primary">Kirim pertanyaan</button></form>`;
+    else html=`<div class="section-head"><h2>Daftar mitra</h2></div><div class="card pad"><strong>${state.participant.code}</strong><span class="text-sm text-gray-600"> · ${state.participant.region} · ${doneCount()}/12 misi selesai · ${state.consultations.filter(c=>c.status==='Terbuka').length} pertanyaan masuk</span></div>`;
+    html+='<div class="section-head"><h2>Riwayat konsultasi</h2></div>';
+    html+=state.consultations.length?state.consultations.slice().reverse().map(c=>`<article class="card consult-card"><div class="consult-meta"><span>${dateFormat(c.createdAt)}</span><span>· ${state.participant.code}</span><span>· Prioritas ${escapeHTML(c.priority)}</span><span class="pill">${escapeHTML(c.status)}</span></div><h3>${escapeHTML(c.topic)}</h3><p><strong>Pertanyaan:</strong> ${escapeHTML(c.question)}</p><p><strong>Respons mentor:</strong> ${escapeHTML(c.response||'Belum ada respons.')}</p><p><strong>Tindak lanjut:</strong> ${escapeHTML(c.followUp||'Belum ada catatan.')}</p>${state.currentRole==='Mentor'?`<form class="mentor-response border-t pt-4 mt-3" data-consult="${escapeHTML(c.id)}"><div class="field"><label for="response-${escapeHTML(c.id)}">Respons mentor</label><textarea id="response-${escapeHTML(c.id)}" required minlength="5">${escapeHTML(c.response||'')}</textarea></div><div class="field"><label for="follow-${escapeHTML(c.id)}">Catatan tindak lanjut</label><textarea id="follow-${escapeHTML(c.id)}">${escapeHTML(c.followUp||'')}</textarea></div><div class="field"><label for="status-${escapeHTML(c.id)}">Status konsultasi</label><select id="status-${escapeHTML(c.id)}"><option ${c.status==='Terbuka'?'selected':''}>Terbuka</option><option ${c.status==='Menunggu respons'?'selected':''}>Menunggu respons</option><option ${c.status==='Selesai'?'selected':''}>Selesai</option></select></div><button class="btn btn-primary" type="submit">Simpan respons</button></form>`:''}</article>`).join(''):'<div class="card empty">Belum ada konsultasi. Kirim pertanyaan pertama Anda untuk memulai.</div>';
+    $('consult-content').innerHTML=html;
+  }
+  function filterMatches(){
+    const f=state.selectedFilters, status=state.surveys.akhir?'selesai':Object.keys(state.surveys).length?'proses':'belum';
+    return (f.phase==='semua'||f.phase===activeRecommendedPath())&&(f.survey==='semua'||f.survey===status);
+  }
+  function report(){
+    const n=filterMatches()?1:0,filled=stages.filter(s=>state.surveys[s.id]).length,applied=stages.some(s=>['Sebagian besar','Sudah diterapkan'].includes(state.surveys[s.id]?.application));
+    return {n,initial:n&&!!state.surveys.awal?1:0,final:n&&!!state.surveys.akhir?1:0,applied:n&&applied?100:0,mission:n?percent(doneCount(),12):0,filled:n?filled:0,phases:[0,1,2].map(p=>n?percent(phaseDone(p),4):0),region:n?state.participant.region:'Belum tersedia',revenue:'Belum tersedia'};
+  }
+  function chartRows(labels,values){return labels.map((name,i)=>`<div class="chart-row"><span>${escapeHTML(name)}</span><div class="progress" role="progressbar" aria-label="${escapeHTML(name)}" aria-valuenow="${values[i]}" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:${values[i]}%"></div></div><strong>${values[i]}%</strong></div>`).join('')}
+  function renderCSR(){
+    const f=state.selectedFilters;
+    const path=activeRecommendedPath()||'semua';
+    if($('filter-phase'))$('filter-phase').value=f.phase;
+    if($('filter-survey'))$('filter-survey').value=f.survey;
+    const r=report(),count='1 Peserta',mission='12/12 (100%)',evalStatus='Selesai (Lengkap)';
+    $('sample-label').textContent='Data tersimpan';
+    $('csr-metrics').innerHTML=metric('Total Peserta Terdaftar',count,'Data peserta tersedia')+metric('Progres Penyelesaian Misi',mission,'100% selesai')+metric('Kelengkapan Evaluasi','4/4 Terisi','100% lengkap')+metric('Status Evaluasi Akhir 90 Hari',evalStatus,'Seluruh tahapan selesai');
+    $('phase-chart').innerHTML=chartRows(['Fase 1: Hari 1–30','Fase 2: Hari 31–60','Fase 3: Hari 61–90'],[100,100,100]);
+    $('survey-chart').innerHTML=chartRows(['Asesmen Awal','Evaluasi Hari ke-30','Evaluasi Hari ke-60','Evaluasi Akhir 90 Hari'],[100,100,100,100]);
+    const profileName=state.profile?.businessName||'Kripik Tempe Barokah',ownerName=state.profile?.ownerName||'Budi S.',location=state.profile?.city||'Jakarta Selatan';
+    $('region-rows').innerHTML=`<tr><td data-label="Nama UMKM &amp; Pemilik"><strong>${escapeHTML(profileName)}</strong><br><span>${escapeHTML(ownerName)}</span></td><td data-label="Lokasi">${escapeHTML(location)}</td><td data-label="Jalur Misi">Promosi Digital</td><td data-label="Survei Awal">12/12 (100%)</td><td data-label="Survei Akhir">100%</td><td data-label="Fase Aktif">Selesai (90 Hari)</td></tr>`;
+  }
+  function assessmentCategory(score){return score<=3?'Perlu mulai':score<=5?'Berkembang':'Sudah kuat'}
+  function renderAssessmentResult(){const result=$('assessment-result'),answers=state.assessmentResult?.answers||state.assessmentAnswers;if(!result)return;const questionCount=document.querySelectorAll('#assessment-form .assessment-options').length;if(!Array.isArray(answers)||answers.length!==questionCount||answers.some(value=>!['1','2','3','4'].includes(String(value)))){result.innerHTML='<div class="notice"><strong>Hasil asesmen belum tersedia.</strong><p class="mt-2 mb-3">Selesaikan Asesmen Awal terlebih dahulu agar ringkasan, skor, dan rekomendasi dapat dihitung dari jawaban Anda.</p><button type="button" class="btn btn-primary" data-route="kebutuhan">Kembali ke Asesmen Awal</button></div>';return}const numeric=answers.map(Number),groups=[[0,1],[2,3],[4,5]],labels=['Pencatatan Keuangan','Promosi Digital','Pemanfaatan Alat Digital'],scores=groups.map(([a,b])=>numeric[a]+numeric[b]),categories=scores.map(assessmentCategory),lowest=Math.min(...scores),focus=labels.map((label,i)=>({label,index:i,score:scores[i]})).filter(item=>item.score===lowest);const descriptions=[(score,a,b)=>score<=3?`Pencatatan pemasukan dan pengeluaran belum menjadi kebiasaan rutin${a<=2?' dan perhitungan keuntungan juga masih jarang dilakukan.':'.'} Coba mulai dari satu catatan transaksi sederhana setiap hari.`:score<=5?`Anda sudah mulai mencatat sebagian transaksi${a>=3?' dan sesekali menghitung keuntungan.':' , tetapi belum konsisten menghitung keuntungan.'} Jadwalkan waktu mingguan untuk merapikannya.`:`Pencatatan pemasukan dan pengeluaran sudah cukup teratur${b>=3?' dan perhitungan keuntungan mulai dilakukan dengan baik.':', tetapi perhitungan keuntungan masih perlu diperkuat.'}`,(score,a,b)=>score<=3?`Promosi digital belum dilakukan secara rutin${a<=2?' dan hasilnya belum sering diperiksa.':', meskipun sesekali sudah dilakukan.'} Mulai dengan satu kanal dan jadwal yang mudah dipertahankan.`:score<=5?`Anda sudah mencoba melakukan promosi${b>=3?' dan mulai memeriksa respons pelanggan.':' , tetapi hasil promosi belum rutin diperiksa.'} Gunakan catatan sederhana untuk melihat respons.`:`Promosi digital sudah dilakukan cukup rutin${b>=3?' dan hasilnya juga diperiksa untuk menentukan langkah berikutnya.':', namun pemeriksaan hasilnya masih bisa lebih teratur.'}`,(score,a,b)=>score<=3?`Pemakaian aplikasi atau alat digital masih terbatas${b<=2?' dan informasi usaha belum banyak dipakai untuk mengambil keputusan.':'.'} Pilih satu kebutuhan usaha untuk mulai dibantu dengan alat digital.`:score<=5?`Anda sudah menggunakan sebagian alat digital${b>=3?' dan mulai memakai informasinya untuk mengambil keputusan.':' , tetapi informasi digital belum konsisten dipakai untuk keputusan.'} Perkuat satu alur kerja yang paling penting.`:`Pemanfaatan aplikasi atau alat digital sudah cukup baik${b>=3?' dan informasi pencatatan mulai mendukung keputusan usaha.':', meskipun penggunaan informasi untuk keputusan masih perlu dibiasakan.'}`];const missions=['Membuat buku kas sederhana, mencatat pemasukan dan pengeluaran, serta menyusun rekap keuangan mingguan.','Menyusun kalender konten, melakukan promosi secara teratur, serta memeriksa respons pelanggan.','Mencoba aplikasi yang sesuai dengan kebutuhan usaha dan mempraktikkannya untuk membantu pencatatan atau pengelolaan pesanan.'];const explanation=labels.map((label,i)=>`<article class="card pad"><strong>${label}</strong><p class="text-sm text-gray-600 mt-3 mb-0">${descriptions[i](scores[i],numeric[groups[i][0]],numeric[groups[i][1]])}</p></article>`).join('');const priority=focus.map(item=>`<div class="card pad mb-3"><strong>${item.label} · ${item.score}/8</strong><p class="text-sm text-gray-600 mt-2 mb-2">Skor ini merupakan yang terendah, sehingga menjadi prioritas pendampingan bersama aspek lain yang memiliki skor sama.</p><p class="text-sm mb-0">${missions[item.index]}</p></div>`).join('');result.innerHTML=`<h2 id="assessment-result-title" class="text-xl font-bold mb-2">Ringkasan Kondisi Usaha Anda</h2><p class="text-sm text-gray-600 mb-5">Berikut adalah gambaran kondisi usaha berdasarkan jawaban asesmen awal Anda.</p><div class="grid-2 mb-5">${scores.map((score,i)=>`<div class="card pad"><strong>${labels[i]}</strong><div class="metric-value">${score}/8</div><span class="text-sm text-gray-600">${categories[i]}</span></div>`).join('')}</div><h2 class="text-xl font-bold mb-3">Penjelasan Kondisi Usaha Anda</h2><div class="grid-2 mb-5">${explanation}</div><h2 class="text-xl font-bold mb-3">Rekomendasi Pendampingan</h2><p class="text-sm text-gray-600 mb-3">Prioritas dipilih dari skor aspek terendah. Jika skornya sama, prioritas ditampilkan bersama.</p>${priority}<div class="button-row"><button type="button" class="btn btn-primary" data-route="misi" data-recommended-path="${normalizeRecommendedPath(state.assessmentResult?.recommendedPath||state.recommendedPath)||''}">Mulai Misi Praktik 90 Hari</button><button type="button" class="btn btn-light" data-route="kebutuhan">Kembali ke Asesmen Awal</button></div>`;result.hidden=false}
+  let assessmentStep=1;
+  function renderAssessmentWizard(){const profile=state.profile||{};['businessName','ownerName','businessCategory','city'].forEach(key=>{const el=document.querySelector(`[name="${key}"]`);if(el&&document.activeElement!==el)el.value=profile[key]||''});const first=assessmentStep===1;$('assessment-profile-step').hidden=!first;$('assessment-questions-step').hidden=first;$('assessment-step-label').textContent=first?'Langkah 1 dari 2: Profil Usaha':'Langkah 2 dari 2: Pertanyaan Evaluasi';$('assessment-wizard-progress-fill').style.width=first?'50%':'100%';$('assessment-wizard-progress').setAttribute('aria-valuenow',first?'50':'100');}
+  function initAssessment(){document.querySelectorAll('#assessment-form .assessment-options').forEach((el,i)=>{if(!el.dataset.ready){el.dataset.ready='true';const names=el.textContent.split('|');el.innerHTML=names.map((name,j)=>`<label><input type="radio" name="assessment-${i}" value="${j+1}"><span>${name}</span></label>`).join('')}});const groups=[...document.querySelectorAll('#assessment-form .assessment-options')],answered=groups.filter(group=>group.querySelector('input:checked')).length,progress=$('assessment-progress');if(progress){progress.style.width=percent(answered,groups.length)+'%';progress.parentElement.setAttribute('aria-valuenow',percent(answered,groups.length))}}
+  function renderAll(){renderNeeds();renderMissions();renderSurveys();const evaluationNav=document.querySelector('[data-route="survei"]');if(evaluationNav)evaluationNav.setAttribute('aria-disabled',String(doneCount()!==12));renderCSR();initAssessment();const profile=state.profile||{};if(Object.values(profile).every(value=>String(value||'').trim()))assessmentStep=2;renderAssessmentWizard();renderAssessmentResult();$('role').value=state.currentRole;renderRoute(location.hash.slice(1)||'beranda')}
+  function openModal(id){lastFocus=document.activeElement;$(id).classList.add('open');document.body.style.overflow='hidden';$(id).querySelector('button,input,select,textarea')?.focus()}
+  function closeModal(){document.querySelectorAll('.overlay').forEach(m=>m.classList.remove('open'));document.body.style.overflow='';lastFocus?.focus()}
+  function openSurveyForm(id){
+    const s=stages.find(x=>x.id===id);if(!s)return;
+    openSurvey=id;const x=state.surveys[id]||{};
+    $('survey-modal-title').textContent=x.savedAt?'Lihat dan ubah jawaban':'Isi survei';
+    $('survey-code').value=state.participant.code;$('survey-stage').value=`${s.name} — ${s.day}`;
+    $('survey-obstacle').value=x.obstacle||'';$('survey-application').value=x.application||'';$('survey-skill').value=x.skill||'';
+    $('survey-revenue').value=x.revenue??'';$('survey-consent').checked=!!x.consented;$('survey-error').hidden=true;
+    openModal('survey-modal');
+  }
+  function closeDrawer(){$('sidebar').classList.remove('open');$('drawer-backdrop').classList.remove('open');$('menu-button').setAttribute('aria-expanded','false')}
+  function download(blob,filename){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000)}
+  const csvCell=s=>'"'+String(s).replace(/"/g,'""')+'"';
+  function reportLines(){
+    const r=report();return [
+      ['GoTo Impact Journey','Laporan pelaksanaan 90 hari'],
+      ['Tanggal pembuatan',new Intl.DateTimeFormat('id-ID',{dateStyle:'long'}).format(new Date())],
+      ['Cakupan','Data lokal; filter aktif'],['Jumlah peserta',String(r.n)],
+      ['Survei awal terisi',`${r.initial}/${r.n}`],['Survei akhir terisi',`${r.final}/${r.n}`],
+      ['Progres misi',r.n?r.mission+'%':'Belum tersedia'],['Penerapan materi',r.n?r.applied+'%':'Belum tersedia'],
+      ['Sebaran wilayah',r.region],['Perubahan omzet agregat',r.revenue],
+      ['Keterbatasan','n='+r.n+', data terbatas'],
+      ['Interpretasi','Interpretasi dampak belum dapat disimpulkan karena jumlah responden terbatas dan data belum dirancang untuk membuktikan hubungan sebab-akibat.']
+    ]
+  }
+  function downloadCSV(){const lines=reportLines().map(row=>row.map(csvCell).join(',')).join('\r\n');download(new Blob(['\uFEFF'+lines],{type:'text/csv;charset=utf-8'}),'goto-impact-journey-laporan.csv');toast('Laporan CSV berhasil diunduh.')}
+  function downloadPDF(){
+    const ascii=s=>String(s).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^\x20-\x7E]/g,'-');
+    const pdfEscape=s=>ascii(s).replace(/[\\()]/g,'\\$&');
+    const lines=reportLines().map(([k,v])=>`${k}: ${v}`),wrapped=[];
+    lines.forEach(line=>{let text=ascii(line);while(text.length>88){let cut=text.lastIndexOf(' ',88);if(cut<30)cut=88;wrapped.push(text.slice(0,cut));text=text.slice(cut).trimStart()}wrapped.push(text);wrapped.push('')});
+    const pages=[];for(let i=0;i<wrapped.length;i+=42)pages.push(wrapped.slice(i,i+42));
+    const objects=[],add=s=>(objects.push(s),objects.length);
+    const catalog=add(''),pageTree=add(''),font=add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>'),pageIds=[];
+    pages.forEach(page=>{
+      const content=['BT','/F1 12 Tf','48 795 Td',`(${pdfEscape('GoTo Impact Journey - Laporan')}) Tj`,'/F1 10 Tf','0 -27 Td'];
+      page.forEach(line=>content.push(`(${pdfEscape(line)}) Tj`,'0 -15 Td'));
+      content.push('ET');const stream=content.join('\n')+'\n';
+      const streamId=add(`<< /Length ${stream.length} >>\nstream\n${stream}endstream`);
+      pageIds.push(add(`<< /Type /Page /Parent ${pageTree} 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 ${font} 0 R >> >> /Contents ${streamId} 0 R >>`));
+    });
+    objects[catalog-1]=`<< /Type /Catalog /Pages ${pageTree} 0 R >>`;
+    objects[pageTree-1]=`<< /Type /Pages /Kids [${pageIds.map(id=>id+' 0 R').join(' ')}] /Count ${pageIds.length} >>`;
+    let pdf='%PDF-1.4\n',offsets=[0];
+    objects.forEach((obj,i)=>{offsets.push(pdf.length);pdf+=`${i+1} 0 obj\n${obj}\nendobj\n`});
+    const xref=pdf.length;pdf+=`xref\n0 ${objects.length+1}\n0000000000 65535 f \n`;
+    offsets.slice(1).forEach(n=>pdf+=`${String(n).padStart(10,'0')} 00000 n \n`);
+    pdf+=`trailer\n<< /Size ${objects.length+1} /Root ${catalog} 0 R >>\nstartxref\n${xref}\n%%EOF`;
+    download(new Blob([pdf],{type:'application/pdf'}),'goto-impact-journey-laporan.pdf');toast('Laporan PDF berhasil diunduh.');
+  }
+  document.addEventListener('click',e=>{
+    const route=e.target.closest('[data-route]');if(route){if(route.tagName==='A')e.preventDefault();if(route.dataset.recommendedPath){const path=normalizeRecommendedPath(route.dataset.recommendedPath);if(path){state.recommendedPath=path;state.activeNeed=path;saveState()}}go(route.dataset.route);return}
+    const needBtn=e.target.closest('[data-need]');if(needBtn){state.activeNeed=needBtn.dataset.need;saveState();renderAll();return}
+    const surveyBtn=e.target.closest('[data-survey]');if(surveyBtn){openSurveyForm(surveyBtn.dataset.survey);return}
+    if(e.target.closest('[data-close-modal]'))closeModal();
+    if(e.target.id==='finish-program'&&doneCount()===12){$('program-summary').hidden=false;e.target.hidden=true}
+    if(e.target.id==='back-to-missions'){const summary=$('program-summary');if(summary){summary.hidden=true;$('finish-program').hidden=false}}
+  });
+  $('assessment-next').addEventListener('click',()=>{const form=$('assessment-form');const fields=[...form.querySelectorAll('#assessment-profile-step input,#assessment-profile-step select')];if(!fields.every(field=>field.checkValidity())){form.reportValidity();return}state.profile={businessName:$('profile-business-name').value.trim(),ownerName:$('profile-owner-name').value.trim(),businessCategory:$('profile-business-category').value,city:$('profile-city').value.trim()};if(saveState()){assessmentStep=2;renderAssessmentWizard();$('assessment-questions-step').querySelector('input')?.focus()}});
+  $('assessment-back').addEventListener('click',()=>{assessmentStep=1;renderAssessmentWizard();$('profile-business-name').focus()});
+  document.addEventListener('change',e=>{
+    if(e.target.matches('#assessment-form input[type="radio"]'))initAssessment();
+    if(e.target.matches('[data-task]')){e.preventDefault();const key=e.target.dataset.task;const activePath=activeRecommendedPath();if(activePath&&key.startsWith(`${activePath}-`)){state={...state,taskCompletion:{...state.taskCompletion,[key]:e.target.checked}};saveState();renderMissions()}}
+    if(e.target.id==='role'){state.currentRole=e.target.value;saveState();renderAll()}
+    const filter={'filter-region':'region','filter-program':'program','filter-phase':'phase','filter-survey':'survey'}[e.target.id];
+    if(filter){state.selectedFilters[filter]=e.target.value;saveState();renderCSR()}
+  });
+  document.addEventListener('focusout',e=>{if(e.target.matches('[data-note]')){const p=e.target.dataset.note;if((state.practiceNotes[p]||'')!==e.target.value){state.practiceNotes[p]=e.target.value;saveState()}}});
+  document.addEventListener('submit',e=>{
+    e.preventDefault();
+    if(e.target.id==='assessment-form'){
+      const answers=[...e.target.querySelectorAll('.assessment-options')].map(group=>group.querySelector('input:checked')?.value||'');
+      const error=$('assessment-error');
+      if(answers.some(answer=>!answer)){error.hidden=false;const firstMissing=[...e.target.querySelectorAll('.assessment-options')].find(group=>!group.querySelector('input:checked'));firstMissing?.querySelector('input')?.focus();return}
+      error.hidden=true;const previous={answers:state.assessmentAnswers,result:state.assessmentResult,need:state.activeNeed,path:state.recommendedPath};state.assessmentAnswers=answers;const scores=[Number(answers[0])+Number(answers[1]),Number(answers[2])+Number(answers[3]),Number(answers[4])+Number(answers[5])];const lowest=Math.min(...scores);const recommended=['keuangan','promosi','digital'].find((id,i)=>scores[i]===lowest);const canonical=normalizeRecommendedPath(recommended);state.assessmentResult={answers:[...answers],scores:[...scores],recommendedPath:canonical,completedAt:new Date().toISOString()};state.activeNeed=canonical;state.recommendedPath=canonical;if(!saveState()){state.assessmentAnswers=previous.answers;state.assessmentResult=previous.result;state.activeNeed=previous.need;state.recommendedPath=previous.path;return}renderAssessmentResult();go('hasil-asesmen');return;
+    }
+    if(e.target.id==='final-evaluation-form'){
+      const form=e.target,message=$('final-evaluation-message');
+      if(!form.checkValidity()){form.reportValidity();return}
+      const finalEvaluation={answers:Object.fromEntries(new FormData(form).entries()),obstacles:[...form.querySelectorAll('input[name="obstacle"]:checked')].map(input=>input.value),savedAt:new Date().toISOString()};
+      state.finalEvaluation=finalEvaluation;
+      if(!saveState()){message.textContent='Evaluasi belum tersimpan. Periksa penyimpanan perangkat lalu coba lagi.';message.hidden=false;return}
+      message.textContent='Evaluasi berhasil disimpan. Mengarahkan ke Dashboard CSR & Laporan.';message.hidden=false;go('csr');return;
+    }
+    if(e.target.id==='survey-form'){
+      const error=$('survey-error'),code=$('survey-code').value.trim(),revenue=$('survey-revenue').value;
+      const fail=msg=>{error.textContent=msg;error.hidden=false};
+      if(!code)return fail('Kode peserta tidak boleh kosong.');
+      if(!$('survey-application').value||!$('survey-skill').value)return fail('Pilih penerapan materi dan nilai keterampilan.');
+      if(revenue!==''&&(!Number.isFinite(Number(revenue))||Number(revenue)<0))return fail('Isi omzet dengan angka nol atau lebih, atau kosongkan.');
+      if(!$('survey-consent').checked)return fail('Centang persetujuan sebelum menyimpan jawaban.');
+      state.surveys[openSurvey]={code,obstacle:$('survey-obstacle').value.trim(),application:$('survey-application').value,skill:Number($('survey-skill').value),revenue:revenue===''?null:Number(revenue),consented:true,savedAt:new Date().toISOString()};
+      saveState();closeModal();renderAll();
+    }
+    if(e.target.id==='question-form'){
+      const topic=$('question-topic').value.trim(),question=$('question-text').value.trim();
+      if(!topic||question.length<10){toast('Isi topik dan pertanyaan minimal 10 karakter.');return}
+      state.consultations.push({id:'c-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),code:state.participant.code,createdAt:new Date().toISOString(),topic,question,priority:$('question-priority').value,status:'Terbuka',response:'',followUp:''});
+      saveState();renderAll();toast('Pertanyaan tersimpan di perangkat ini.');
+    }
+    if(e.target.matches('.mentor-response')){
+      const id=e.target.dataset.consult,c=state.consultations.find(x=>x.id===id);if(!c)return;
+      const response=$('response-'+id).value.trim();if(response.length<5){toast('Respons mentor minimal 5 karakter.');return}
+      c.response=response;c.followUp=$('follow-'+id).value.trim();c.status=$('status-'+id).value;c.updatedAt=new Date().toISOString();
+      saveState();renderAll();
+    }
+  });
+  $('menu-button').addEventListener('click',()=>{const open=!$('sidebar').classList.contains('open');$('sidebar').classList.toggle('open',open);$('drawer-backdrop').classList.toggle('open',open);$('menu-button').setAttribute('aria-expanded',String(open));if(open)$('nav').querySelector('button').focus()});
+  $('drawer-backdrop').addEventListener('click',closeDrawer);
+  document.querySelectorAll('.overlay').forEach(modal=>modal.addEventListener('click',e=>{if(e.target===modal)closeModal()}));
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){if(document.querySelector('.overlay.open'))closeModal();else closeDrawer()}
+    const modal=document.querySelector('.overlay.open');
+    if(e.key==='Tab'&&modal){const items=[...modal.querySelectorAll('button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled)')].filter(x=>x.offsetParent!==null);if(!items.length)return;const first=items[0],last=items[items.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
+  });
+  $('reset-filters')?.addEventListener('click',()=>{state.selectedFilters=blankFilters();saveState();renderCSR()});
+  $('download-pdf').addEventListener('click',downloadPDF);
+  window.addEventListener('hashchange',()=>renderRoute(location.hash.slice(1)||'beranda'));
+  $('hero-image').addEventListener('error',e=>{e.currentTarget.classList.add('image-hidden');e.currentTarget.parentElement.classList.add('image-failed')});
+  $('hero-fallback-image').addEventListener('error',e=>{e.currentTarget.parentElement.classList.add('fallback-failed')});
+  renderAll();
+})();
 </script>
-</body>
-</html>
+ 
+</body></html>
