@@ -179,7 +179,7 @@
   <div class="shell">
    <div id="drawer-backdrop" class="drawer-backdrop"></div>
    <aside id="sidebar" class="sidebar" aria-label="Navigasi utama">
-    <a href="#beranda" class="brand"> <img data-template-id="brand-logo" class="canva-image brand-logo" loading="lazy" src="canva://MAHX-DIpTDs/1" alt="Logo dari Brand Kit"> <span class="brand-text"><span data-template-id="brand-name" class="canva-text" style="color: rgb(24, 34, 29); font-weight: 700; font-style: normal; font-size: 16px;">GoTo Impact</span><small data-template-id="brand-kicker" class="canva-text brand-kicker" style="color: rgb(5, 109, 54); font-weight: 800; font-style: normal; font-size: 10px;">JOURNEY</small></span> </a>
+    <a href="#beranda" class="brand"> <img data-template-id="brand-logo" class="canva-image brand-logo" loading="lazy" src="logo%20goto%20impact%20journey%20fiks.png" alt="Logo GoTo Impact Journey"> <span class="brand-text"><span data-template-id="brand-name" class="canva-text" style="color: rgb(24, 34, 29); font-weight: 700; font-style: normal; font-size: 16px;">GoTo Impact</span><small data-template-id="brand-kicker" class="canva-text brand-kicker" style="color: rgb(5, 109, 54); font-weight: 800; font-style: normal; font-size: 10px;">JOURNEY</small></span> </a>
     <nav id="nav" aria-label="Modul aplikasi">
      <button type="button" class="nav-btn" data-route="beranda">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3z"></path><path d="M9 20v-7h6v7"></path>
@@ -202,7 +202,7 @@
    </aside>
    <div class="workspace">
     <header class="topbar">
-     <div class="topbar-left"><img data-template-id="header-wordmark" class="canva-image topbar-wordmark" loading="lazy" src="canva://MAHX-DIpTDs/1" alt="Logo GoTo dengan tulisan putih dan garis kuning pada header"><span id="top-title" class="top-title">Beranda</span>
+     <div class="topbar-left"><img data-template-id="header-wordmark" class="canva-image topbar-wordmark" loading="lazy" src="logo%20goto%20impact%20journey%20fiks.png" alt="Logo GoTo Impact Journey"><span id="top-title" class="top-title">Beranda</span>
      </div>
      <div class="top-controls">
       <span class="saved">Tersimpan di perangkat ini</span><label for="role" class="sr-only">Pilih peran</label><select id="role" class="role-select" aria-label="Pilih peran"><option>Mitra</option><option>CSR</option></select><span class="avatar" title="UMKM-JKT-01" aria-label="Peserta UMKM-JKT-01">UJ</span>
@@ -535,6 +535,12 @@
   function go(route){if(!routes[route])route='beranda';if(location.hash!=='#'+route)location.hash=route;renderRoute(route)}
   function renderRoute(route){
     if(!routes[route])route='beranda';
+    // Perbarui isi modul tepat saat dibuka; tidak perlu refresh browser.
+    if(route==='misi')renderMissions();
+    if(route==='survei')renderSurveys();
+    if(route==='hasil-asesmen')renderAssessmentResult();
+    if(route==='kebutuhan'){initAssessment();renderAssessmentWizard();}
+    if(route==='csr')renderCSR();
     document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+route));
     document.querySelectorAll('.nav-btn').forEach(b=>{b.classList.toggle('active',b.dataset.route===route);if(b.dataset.route===route)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
     $('top-title').textContent=routes[route];closeDrawer();window.scrollTo(0,0);
@@ -738,6 +744,7 @@
   $('reset-filters')?.addEventListener('click',()=>{state.selectedFilters=blankFilters();saveState();renderCSR()});
   $('download-pdf').addEventListener('click',downloadPDF);
   window.addEventListener('hashchange',()=>renderRoute(location.hash.slice(1)||'beranda'));
+  document.querySelectorAll('.brand-logo,.topbar-wordmark').forEach(img=>img.addEventListener('error',e=>{e.currentTarget.style.display='none'}));
   $('hero-image').addEventListener('error',e=>{e.currentTarget.classList.add('image-hidden');e.currentTarget.parentElement.classList.add('image-failed')});
   $('hero-fallback-image').addEventListener('error',e=>{e.currentTarget.parentElement.classList.add('fallback-failed')});
   renderAll();
